@@ -9,7 +9,7 @@ import UIKit
 
 class PoliciesTableViewCell: UITableViewCell {
 
-    var policiesIcons = [""]
+    var policiesIcons = ["check-2","free-delivery","return-box","phone-2"]
     var policiesTitles = ["Quality Product","Free Shipping","14-Day Return","24/7 Support"]
 
     @IBOutlet weak var policiesCollectioinView: UICollectionView!
@@ -29,12 +29,13 @@ class PoliciesTableViewCell: UITableViewCell {
 
 extension PoliciesTableViewCell:UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return policiesTitles.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let policyCollectionCell = policiesCollectioinView.dequeueReusableCell(withReuseIdentifier: "PoliciesCollectionViewCell", for: indexPath) as! PoliciesCollectionViewCell
         
+        policyCollectionCell.policyImg.image = UIImage(named: policiesIcons[indexPath.item])
         policyCollectionCell.lblPolicyTitle.text = policiesTitles[indexPath.item]
         
         return policyCollectionCell
@@ -48,9 +49,5 @@ extension PoliciesTableViewCell:UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         10
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        0
-//    }
     
 }

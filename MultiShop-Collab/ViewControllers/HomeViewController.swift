@@ -11,7 +11,6 @@ import UIKit
 class HomeViewController: UIViewController  {
 
     
-
     @IBOutlet weak var mainTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +28,7 @@ class HomeViewController: UIViewController  {
 
 extension HomeViewController:UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,12 +36,21 @@ extension HomeViewController:UITableViewDataSource, UITableViewDelegate {
         if indexPath.row == 0 {
             let sliderTblCell = mainTableView.dequeueReusableCell(withIdentifier: "SliderTableViewCell") as! SliderTableViewCell
             
+            sliderTblCell.selectionStyle = .none
+            
             return sliderTblCell
+        }else if indexPath.row == 1 {
+            let policiesTblCell = mainTableView.dequeueReusableCell(withIdentifier: "PoliciesTableViewCell") as! PoliciesTableViewCell
+            
+            policiesTblCell.selectionStyle = .none
+            
+            return policiesTblCell
         }
-
         
-        let policiesTblCell = mainTableView.dequeueReusableCell(withIdentifier: "PoliciesTableViewCell") as! PoliciesTableViewCell
+        let categoriesTblCell = mainTableView.dequeueReusableCell(withIdentifier: "CategoriesTableViewCell") as! CategoriesTableViewCell
         
-        return policiesTblCell
+        categoriesTblCell.selectionStyle = .none
+        
+        return categoriesTblCell
     }
 }
