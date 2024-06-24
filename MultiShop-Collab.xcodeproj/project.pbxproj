@@ -27,6 +27,10 @@
 		C37DC6422C29507500FAFC9E /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6412C29507500FAFC9E /* CartViewController.swift */; };
 		C37DC6442C29508700FAFC9E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6432C29508700FAFC9E /* AccountViewController.swift */; };
 		C37DC6462C29513900FAFC9E /* Cart-Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37DC6452C29513900FAFC9E /* Cart-Checkout.storyboard */; };
+		C37ED7622C296CF000BC2DF2 /* PoliciesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ED7612C296CF000BC2DF2 /* PoliciesTableViewCell.swift */; };
+		C37ED7642C296DEA00BC2DF2 /* PoliciesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37ED7632C296DEA00BC2DF2 /* PoliciesCollectionViewCell.swift */; };
+		C3B4BFF82C2956CA00EA3F46 /* SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B4BFF72C2956CA00EA3F46 /* SliderTableViewCell.swift */; };
+		C3B4BFFA2C2957C100EA3F46 /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B4BFF92C2957C100EA3F46 /* SliderCollectionViewCell.swift */; };
 		FBA1ED3D4CFDF51A394789B3 /* Pods_MultiShop_Collab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D6FD7878828BF96A7D0177 /* Pods_MultiShop_Collab.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +81,10 @@
 		C37DC6412C29507500FAFC9E /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		C37DC6432C29508700FAFC9E /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		C37DC6452C29513900FAFC9E /* Cart-Checkout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Cart-Checkout.storyboard"; sourceTree = "<group>"; };
+		C37ED7612C296CF000BC2DF2 /* PoliciesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliciesTableViewCell.swift; sourceTree = "<group>"; };
+		C37ED7632C296DEA00BC2DF2 /* PoliciesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliciesCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3B4BFF72C2956CA00EA3F46 /* SliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
+		C3B4BFF92C2957C100EA3F46 /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
 		D14F2B59F59BB4AD8436F048 /* Pods-MultiShop-Collab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-Collab.debug.xcconfig"; path = "Target Support Files/Pods-MultiShop-Collab/Pods-MultiShop-Collab.debug.xcconfig"; sourceTree = "<group>"; };
 		FDE3909E738A0990D677D7AC /* Pods-MultiShop-Collab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-Collab.release.xcconfig"; path = "Target Support Files/Pods-MultiShop-Collab/Pods-MultiShop-Collab.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +165,7 @@
 		C37DC5FB2C2945CC00FAFC9E /* MultiShop-Collab */ = {
 			isa = PBXGroup;
 			children = (
+				C3B4BFF42C2955D400EA3F46 /* Cells */,
 				C37DC6362C29486400FAFC9E /* UI */,
 				C37DC6352C29485400FAFC9E /* ViewControllers */,
 				C37DC6322C29481D00FAFC9E /* Common */,
@@ -240,6 +249,33 @@
 				C37DC6452C29513900FAFC9E /* Cart-Checkout.storyboard */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		C3B4BFF42C2955D400EA3F46 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C3B4BFF62C2955F100EA3F46 /* CollectionViewCells */,
+				C3B4BFF52C2955E000EA3F46 /* TableViewCells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C3B4BFF52C2955E000EA3F46 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				C3B4BFF72C2956CA00EA3F46 /* SliderTableViewCell.swift */,
+				C37ED7612C296CF000BC2DF2 /* PoliciesTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		C3B4BFF62C2955F100EA3F46 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				C3B4BFF92C2957C100EA3F46 /* SliderCollectionViewCell.swift */,
+				C37ED7632C296DEA00BC2DF2 /* PoliciesCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,12 +522,16 @@
 				C37DC63C2C29497C00FAFC9E /* protocols.swift in Sources */,
 				C37DC6422C29507500FAFC9E /* CartViewController.swift in Sources */,
 				C37DC6402C29506000FAFC9E /* ShopViewController.swift in Sources */,
+				C3B4BFFA2C2957C100EA3F46 /* SliderCollectionViewCell.swift in Sources */,
+				C37ED7622C296CF000BC2DF2 /* PoliciesTableViewCell.swift in Sources */,
 				C37DC5FD2C2945CC00FAFC9E /* AppDelegate.swift in Sources */,
 				C37DC6382C29492B00FAFC9E /* NetworkManager.swift in Sources */,
 				C37DC63E2C2949DE00FAFC9E /* Extentions.swift in Sources */,
+				C37ED7642C296DEA00BC2DF2 /* PoliciesCollectionViewCell.swift in Sources */,
 				C37DC6072C2945CC00FAFC9E /* MultiShop_Collab.xcdatamodeld in Sources */,
 				C37DC5FF2C2945CC00FAFC9E /* SceneDelegate.swift in Sources */,
 				C37DC63A2C29496100FAFC9E /* Constants.swift in Sources */,
+				C3B4BFF82C2956CA00EA3F46 /* SliderTableViewCell.swift in Sources */,
 				C37DC6442C29508700FAFC9E /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -682,6 +722,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -710,6 +751,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
