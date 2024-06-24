@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AE301898110638C382F35DF /* Pods_MultiShop_CollabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E7451B77EADE66A8AF869A /* Pods_MultiShop_CollabTests.framework */; };
+		965E379830C6AF138B967B07 /* Pods_MultiShop_Collab_MultiShop_CollabUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B588D20A9E7FF544C426160 /* Pods_MultiShop_Collab_MultiShop_CollabUITests.framework */; };
 		C37DC5FD2C2945CC00FAFC9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC5FC2C2945CC00FAFC9E /* AppDelegate.swift */; };
 		C37DC5FF2C2945CC00FAFC9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC5FE2C2945CC00FAFC9E /* SceneDelegate.swift */; };
 		C37DC6012C2945CC00FAFC9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6002C2945CC00FAFC9E /* ViewController.swift */; };
@@ -17,6 +19,11 @@
 		C37DC6172C2945CE00FAFC9E /* MultiShop_CollabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6162C2945CE00FAFC9E /* MultiShop_CollabTests.swift */; };
 		C37DC6212C2945CE00FAFC9E /* MultiShop_CollabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6202C2945CE00FAFC9E /* MultiShop_CollabUITests.swift */; };
 		C37DC6232C2945CE00FAFC9E /* MultiShop_CollabUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6222C2945CE00FAFC9E /* MultiShop_CollabUITestsLaunchTests.swift */; };
+		C37DC6382C29492B00FAFC9E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6372C29492B00FAFC9E /* NetworkManager.swift */; };
+		C37DC63A2C29496100FAFC9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6392C29496100FAFC9E /* Constants.swift */; };
+		C37DC63C2C29497C00FAFC9E /* protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC63B2C29497C00FAFC9E /* protocols.swift */; };
+		C37DC63E2C2949DE00FAFC9E /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC63D2C2949DE00FAFC9E /* Extentions.swift */; };
+		FBA1ED3D4CFDF51A394789B3 /* Pods_MultiShop_Collab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D6FD7878828BF96A7D0177 /* Pods_MultiShop_Collab.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10E7451B77EADE66A8AF869A /* Pods_MultiShop_CollabTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultiShop_CollabTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26E44CDD42061FCC6878CC40 /* Pods-MultiShop-CollabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-CollabTests.debug.xcconfig"; path = "Target Support Files/Pods-MultiShop-CollabTests/Pods-MultiShop-CollabTests.debug.xcconfig"; sourceTree = "<group>"; };
+		53D6FD7878828BF96A7D0177 /* Pods_MultiShop_Collab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultiShop_Collab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B588D20A9E7FF544C426160 /* Pods_MultiShop_Collab_MultiShop_CollabUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultiShop_Collab_MultiShop_CollabUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BD48927881D50E849EC9871 /* Pods-MultiShop-CollabTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-CollabTests.release.xcconfig"; path = "Target Support Files/Pods-MultiShop-CollabTests/Pods-MultiShop-CollabTests.release.xcconfig"; sourceTree = "<group>"; };
+		94F76E3EBEFC2EA45D72BDF8 /* Pods-MultiShop-Collab-MultiShop-CollabUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-Collab-MultiShop-CollabUITests.debug.xcconfig"; path = "Target Support Files/Pods-MultiShop-Collab-MultiShop-CollabUITests/Pods-MultiShop-Collab-MultiShop-CollabUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A19A3A60BC50C92E5D73A3EC /* Pods-MultiShop-Collab-MultiShop-CollabUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-Collab-MultiShop-CollabUITests.release.xcconfig"; path = "Target Support Files/Pods-MultiShop-Collab-MultiShop-CollabUITests/Pods-MultiShop-Collab-MultiShop-CollabUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C37DC5F92C2945CC00FAFC9E /* MultiShop-Collab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MultiShop-Collab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37DC5FC2C2945CC00FAFC9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C37DC5FE2C2945CC00FAFC9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +65,12 @@
 		C37DC61C2C2945CE00FAFC9E /* MultiShop-CollabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MultiShop-CollabUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37DC6202C2945CE00FAFC9E /* MultiShop_CollabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiShop_CollabUITests.swift; sourceTree = "<group>"; };
 		C37DC6222C2945CE00FAFC9E /* MultiShop_CollabUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiShop_CollabUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C37DC6372C29492B00FAFC9E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C37DC6392C29496100FAFC9E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C37DC63B2C29497C00FAFC9E /* protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocols.swift; sourceTree = "<group>"; };
+		C37DC63D2C2949DE00FAFC9E /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		D14F2B59F59BB4AD8436F048 /* Pods-MultiShop-Collab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-Collab.debug.xcconfig"; path = "Target Support Files/Pods-MultiShop-Collab/Pods-MultiShop-Collab.debug.xcconfig"; sourceTree = "<group>"; };
+		FDE3909E738A0990D677D7AC /* Pods-MultiShop-Collab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-Collab.release.xcconfig"; path = "Target Support Files/Pods-MultiShop-Collab/Pods-MultiShop-Collab.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA1ED3D4CFDF51A394789B3 /* Pods_MultiShop_Collab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AE301898110638C382F35DF /* Pods_MultiShop_CollabTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +94,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965E379830C6AF138B967B07 /* Pods_MultiShop_Collab_MultiShop_CollabUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2403D1E699084AE1E15A7AA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D14F2B59F59BB4AD8436F048 /* Pods-MultiShop-Collab.debug.xcconfig */,
+				FDE3909E738A0990D677D7AC /* Pods-MultiShop-Collab.release.xcconfig */,
+				94F76E3EBEFC2EA45D72BDF8 /* Pods-MultiShop-Collab-MultiShop-CollabUITests.debug.xcconfig */,
+				A19A3A60BC50C92E5D73A3EC /* Pods-MultiShop-Collab-MultiShop-CollabUITests.release.xcconfig */,
+				26E44CDD42061FCC6878CC40 /* Pods-MultiShop-CollabTests.debug.xcconfig */,
+				8BD48927881D50E849EC9871 /* Pods-MultiShop-CollabTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		970C462B1606017852A6F95C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53D6FD7878828BF96A7D0177 /* Pods_MultiShop_Collab.framework */,
+				5B588D20A9E7FF544C426160 /* Pods_MultiShop_Collab_MultiShop_CollabUITests.framework */,
+				10E7451B77EADE66A8AF869A /* Pods_MultiShop_CollabTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C37DC5F02C2945CC00FAFC9E = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +131,8 @@
 				C37DC6152C2945CE00FAFC9E /* MultiShop-CollabTests */,
 				C37DC61F2C2945CE00FAFC9E /* MultiShop-CollabUITests */,
 				C37DC5FA2C2945CC00FAFC9E /* Products */,
+				2403D1E699084AE1E15A7AA6 /* Pods */,
+				970C462B1606017852A6F95C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +149,12 @@
 		C37DC5FB2C2945CC00FAFC9E /* MultiShop-Collab */ = {
 			isa = PBXGroup;
 			children = (
+				C37DC6362C29486400FAFC9E /* UI */,
+				C37DC6352C29485400FAFC9E /* ViewControllers */,
+				C37DC6322C29481D00FAFC9E /* Common */,
+				C37DC6312C29480700FAFC9E /* ViewModels */,
+				C37DC6302C2947F900FAFC9E /* Models */,
+				C37DC62F2C2947E700FAFC9E /* NetworkManager */,
 				C37DC5FC2C2945CC00FAFC9E /* AppDelegate.swift */,
 				C37DC5FE2C2945CC00FAFC9E /* SceneDelegate.swift */,
 				C37DC6002C2945CC00FAFC9E /* ViewController.swift */,
@@ -130,6 +184,52 @@
 			path = "MultiShop-CollabUITests";
 			sourceTree = "<group>";
 		};
+		C37DC62F2C2947E700FAFC9E /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				C37DC6372C29492B00FAFC9E /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		C37DC6302C2947F900FAFC9E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C37DC6312C29480700FAFC9E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C37DC6322C29481D00FAFC9E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C37DC6392C29496100FAFC9E /* Constants.swift */,
+				C37DC63B2C29497C00FAFC9E /* protocols.swift */,
+				C37DC63D2C2949DE00FAFC9E /* Extentions.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C37DC6352C29485400FAFC9E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C37DC6362C29486400FAFC9E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +237,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C37DC6262C2945CE00FAFC9E /* Build configuration list for PBXNativeTarget "MultiShop-Collab" */;
 			buildPhases = (
+				A8E95FFDEB55D222D25E5E14 /* [CP] Check Pods Manifest.lock */,
 				C37DC5F52C2945CC00FAFC9E /* Sources */,
 				C37DC5F62C2945CC00FAFC9E /* Frameworks */,
 				C37DC5F72C2945CC00FAFC9E /* Resources */,
+				C60D7223432BE874C69DBEDF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +256,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C37DC6292C2945CE00FAFC9E /* Build configuration list for PBXNativeTarget "MultiShop-CollabTests" */;
 			buildPhases = (
+				BDFB948C94D90DACF86B9E2C /* [CP] Check Pods Manifest.lock */,
 				C37DC60E2C2945CE00FAFC9E /* Sources */,
 				C37DC60F2C2945CE00FAFC9E /* Frameworks */,
 				C37DC6102C2945CE00FAFC9E /* Resources */,
@@ -172,9 +275,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C37DC62C2C2945CE00FAFC9E /* Build configuration list for PBXNativeTarget "MultiShop-CollabUITests" */;
 			buildPhases = (
+				3AE22CFBCE77AEBCAEF845A0 /* [CP] Check Pods Manifest.lock */,
 				C37DC6182C2945CE00FAFC9E /* Sources */,
 				C37DC6192C2945CE00FAFC9E /* Frameworks */,
 				C37DC61A2C2945CE00FAFC9E /* Resources */,
+				C74469626E530E697FD6DE40 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,15 +361,122 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3AE22CFBCE77AEBCAEF845A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MultiShop-Collab-MultiShop-CollabUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8E95FFDEB55D222D25E5E14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MultiShop-Collab-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDFB948C94D90DACF86B9E2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MultiShop-CollabTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C60D7223432BE874C69DBEDF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultiShop-Collab/Pods-MultiShop-Collab-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultiShop-Collab/Pods-MultiShop-Collab-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MultiShop-Collab/Pods-MultiShop-Collab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C74469626E530E697FD6DE40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultiShop-Collab-MultiShop-CollabUITests/Pods-MultiShop-Collab-MultiShop-CollabUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultiShop-Collab-MultiShop-CollabUITests/Pods-MultiShop-Collab-MultiShop-CollabUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MultiShop-Collab-MultiShop-CollabUITests/Pods-MultiShop-Collab-MultiShop-CollabUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C37DC5F52C2945CC00FAFC9E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C37DC6012C2945CC00FAFC9E /* ViewController.swift in Sources */,
+				C37DC63C2C29497C00FAFC9E /* protocols.swift in Sources */,
 				C37DC5FD2C2945CC00FAFC9E /* AppDelegate.swift in Sources */,
+				C37DC6382C29492B00FAFC9E /* NetworkManager.swift in Sources */,
+				C37DC63E2C2949DE00FAFC9E /* Extentions.swift in Sources */,
 				C37DC6072C2945CC00FAFC9E /* MultiShop_Collab.xcdatamodeld in Sources */,
 				C37DC5FF2C2945CC00FAFC9E /* SceneDelegate.swift in Sources */,
+				C37DC63A2C29496100FAFC9E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +653,7 @@
 		};
 		C37DC6272C2945CE00FAFC9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D14F2B59F59BB4AD8436F048 /* Pods-MultiShop-Collab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -468,6 +681,7 @@
 		};
 		C37DC6282C2945CE00FAFC9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDE3909E738A0990D677D7AC /* Pods-MultiShop-Collab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -495,6 +709,7 @@
 		};
 		C37DC62A2C2945CE00FAFC9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26E44CDD42061FCC6878CC40 /* Pods-MultiShop-CollabTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -514,6 +729,7 @@
 		};
 		C37DC62B2C2945CE00FAFC9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BD48927881D50E849EC9871 /* Pods-MultiShop-CollabTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -533,6 +749,7 @@
 		};
 		C37DC62D2C2945CE00FAFC9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94F76E3EBEFC2EA45D72BDF8 /* Pods-MultiShop-Collab-MultiShop-CollabUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -550,6 +767,7 @@
 		};
 		C37DC62E2C2945CE00FAFC9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A19A3A60BC50C92E5D73A3EC /* Pods-MultiShop-Collab-MultiShop-CollabUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
