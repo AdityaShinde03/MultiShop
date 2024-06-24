@@ -11,7 +11,7 @@
 		965E379830C6AF138B967B07 /* Pods_MultiShop_Collab_MultiShop_CollabUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B588D20A9E7FF544C426160 /* Pods_MultiShop_Collab_MultiShop_CollabUITests.framework */; };
 		C37DC5FD2C2945CC00FAFC9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC5FC2C2945CC00FAFC9E /* AppDelegate.swift */; };
 		C37DC5FF2C2945CC00FAFC9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC5FE2C2945CC00FAFC9E /* SceneDelegate.swift */; };
-		C37DC6012C2945CC00FAFC9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6002C2945CC00FAFC9E /* ViewController.swift */; };
+		C37DC6012C2945CC00FAFC9E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6002C2945CC00FAFC9E /* HomeViewController.swift */; };
 		C37DC6042C2945CC00FAFC9E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C37DC6032C2945CC00FAFC9E /* Base */; };
 		C37DC6072C2945CC00FAFC9E /* MultiShop_Collab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6052C2945CC00FAFC9E /* MultiShop_Collab.xcdatamodeld */; };
 		C37DC6092C2945CE00FAFC9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37DC6082C2945CE00FAFC9E /* Assets.xcassets */; };
@@ -23,6 +23,10 @@
 		C37DC63A2C29496100FAFC9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6392C29496100FAFC9E /* Constants.swift */; };
 		C37DC63C2C29497C00FAFC9E /* protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC63B2C29497C00FAFC9E /* protocols.swift */; };
 		C37DC63E2C2949DE00FAFC9E /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC63D2C2949DE00FAFC9E /* Extentions.swift */; };
+		C37DC6402C29506000FAFC9E /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC63F2C29506000FAFC9E /* ShopViewController.swift */; };
+		C37DC6422C29507500FAFC9E /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6412C29507500FAFC9E /* CartViewController.swift */; };
+		C37DC6442C29508700FAFC9E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6432C29508700FAFC9E /* AccountViewController.swift */; };
+		C37DC6462C29513900FAFC9E /* Cart-Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37DC6452C29513900FAFC9E /* Cart-Checkout.storyboard */; };
 		FBA1ED3D4CFDF51A394789B3 /* Pods_MultiShop_Collab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D6FD7878828BF96A7D0177 /* Pods_MultiShop_Collab.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +58,7 @@
 		C37DC5F92C2945CC00FAFC9E /* MultiShop-Collab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MultiShop-Collab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37DC5FC2C2945CC00FAFC9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C37DC5FE2C2945CC00FAFC9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C37DC6002C2945CC00FAFC9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C37DC6002C2945CC00FAFC9E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C37DC6032C2945CC00FAFC9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C37DC6062C2945CC00FAFC9E /* MultiShop_Collab.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MultiShop_Collab.xcdatamodel; sourceTree = "<group>"; };
 		C37DC6082C2945CE00FAFC9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +73,10 @@
 		C37DC6392C29496100FAFC9E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C37DC63B2C29497C00FAFC9E /* protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocols.swift; sourceTree = "<group>"; };
 		C37DC63D2C2949DE00FAFC9E /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		C37DC63F2C29506000FAFC9E /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		C37DC6412C29507500FAFC9E /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		C37DC6432C29508700FAFC9E /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		C37DC6452C29513900FAFC9E /* Cart-Checkout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Cart-Checkout.storyboard"; sourceTree = "<group>"; };
 		D14F2B59F59BB4AD8436F048 /* Pods-MultiShop-Collab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-Collab.debug.xcconfig"; path = "Target Support Files/Pods-MultiShop-Collab/Pods-MultiShop-Collab.debug.xcconfig"; sourceTree = "<group>"; };
 		FDE3909E738A0990D677D7AC /* Pods-MultiShop-Collab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-Collab.release.xcconfig"; path = "Target Support Files/Pods-MultiShop-Collab/Pods-MultiShop-Collab.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,8 +165,6 @@
 				C37DC62F2C2947E700FAFC9E /* NetworkManager */,
 				C37DC5FC2C2945CC00FAFC9E /* AppDelegate.swift */,
 				C37DC5FE2C2945CC00FAFC9E /* SceneDelegate.swift */,
-				C37DC6002C2945CC00FAFC9E /* ViewController.swift */,
-				C37DC6022C2945CC00FAFC9E /* Main.storyboard */,
 				C37DC6082C2945CE00FAFC9E /* Assets.xcassets */,
 				C37DC60A2C2945CE00FAFC9E /* LaunchScreen.storyboard */,
 				C37DC60D2C2945CE00FAFC9E /* Info.plist */,
@@ -219,6 +225,10 @@
 		C37DC6352C29485400FAFC9E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C37DC6002C2945CC00FAFC9E /* HomeViewController.swift */,
+				C37DC63F2C29506000FAFC9E /* ShopViewController.swift */,
+				C37DC6412C29507500FAFC9E /* CartViewController.swift */,
+				C37DC6432C29508700FAFC9E /* AccountViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -226,6 +236,8 @@
 		C37DC6362C29486400FAFC9E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C37DC6022C2945CC00FAFC9E /* Main.storyboard */,
+				C37DC6452C29513900FAFC9E /* Cart-Checkout.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -339,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C37DC6462C29513900FAFC9E /* Cart-Checkout.storyboard in Resources */,
 				C37DC6092C2945CE00FAFC9E /* Assets.xcassets in Resources */,
 				C37DC60C2C2945CE00FAFC9E /* Base in Resources */,
 				C37DC6042C2945CC00FAFC9E /* Base in Resources */,
@@ -469,14 +482,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C37DC6012C2945CC00FAFC9E /* ViewController.swift in Sources */,
+				C37DC6012C2945CC00FAFC9E /* HomeViewController.swift in Sources */,
 				C37DC63C2C29497C00FAFC9E /* protocols.swift in Sources */,
+				C37DC6422C29507500FAFC9E /* CartViewController.swift in Sources */,
+				C37DC6402C29506000FAFC9E /* ShopViewController.swift in Sources */,
 				C37DC5FD2C2945CC00FAFC9E /* AppDelegate.swift in Sources */,
 				C37DC6382C29492B00FAFC9E /* NetworkManager.swift in Sources */,
 				C37DC63E2C2949DE00FAFC9E /* Extentions.swift in Sources */,
 				C37DC6072C2945CC00FAFC9E /* MultiShop_Collab.xcdatamodeld in Sources */,
 				C37DC5FF2C2945CC00FAFC9E /* SceneDelegate.swift in Sources */,
 				C37DC63A2C29496100FAFC9E /* Constants.swift in Sources */,
+				C37DC6442C29508700FAFC9E /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,7 +585,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -632,7 +648,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
