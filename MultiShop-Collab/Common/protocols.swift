@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import UIKit
+
+protocol QuantityDelegate {
+    func addQuantity(index: Int)
+    func substractQuantity(index: Int)
+    func showQuantityTotal()
+}
