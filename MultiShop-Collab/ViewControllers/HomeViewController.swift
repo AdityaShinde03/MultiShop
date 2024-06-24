@@ -15,10 +15,18 @@ class HomeViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.isNavigationBarHidden = true
+        
         mainTableView.delegate  = self
         mainTableView.dataSource = self
         
         mainTableView.separatorStyle = .none
+    }
+    
+    override func viewWillLayoutSubviews() {
+      super.viewWillLayoutSubviews()
+
+        mainTableView.reloadData()
     }
 
 
@@ -28,13 +36,15 @@ class HomeViewController: UIViewController  {
 
 extension HomeViewController:UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 0 {
             let sliderTblCell = mainTableView.dequeueReusableCell(withIdentifier: "SliderTableViewCell") as! SliderTableViewCell
+            
+            sliderTblCell.sliderCollectionView.reloadData()
             
             sliderTblCell.selectionStyle = .none
             
@@ -45,12 +55,20 @@ extension HomeViewController:UITableViewDataSource, UITableViewDelegate {
             policiesTblCell.selectionStyle = .none
             
             return policiesTblCell
+        }else if indexPath.row == 2 {
+            let categoriesTblCell = mainTableView.dequeueReusableCell(withIdentifier: "CategoriesTableViewCell") as! CategoriesTableViewCell
+            
+            categoriesTblCell.selectionStyle = .none
+            
+            return categoriesTblCell
         }
         
-        let categoriesTblCell = mainTableView.dequeueReusableCell(withIdentifier: "CategoriesTableViewCell") as! CategoriesTableViewCell
+        let productsTblCell = mainTableView.dequeueReusableCell(withIdentifier: "FeaturedProductsTableViewCell") as! FeaturedProductsTableViewCell
         
-        categoriesTblCell.selectionStyle = .none
+        productsTblCell.productsCollectionView.reloadData()
         
-        return categoriesTblCell
+        productsTblCell.selectionStyle = .none
+        
+        return productsTblCell
     }
 }

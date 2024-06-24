@@ -18,5 +18,8 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
         
         categoryView.layer.cornerRadius = 9.0
         categoryView.clipsToBounds = true
+        
+        categoryView.layer.borderWidth = 1.0
+        categoryView.layer.borderColor = UIColor.lightGray.cgColor
     }
 }
