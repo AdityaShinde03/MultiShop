@@ -1,0 +1,841 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5AE301898110638C382F35DF /* Pods_MultiShop_CollabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E7451B77EADE66A8AF869A /* Pods_MultiShop_CollabTests.framework */; };
+		965E379830C6AF138B967B07 /* Pods_MultiShop_Collab_MultiShop_CollabUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B588D20A9E7FF544C426160 /* Pods_MultiShop_Collab_MultiShop_CollabUITests.framework */; };
+		C37DC5FD2C2945CC00FAFC9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC5FC2C2945CC00FAFC9E /* AppDelegate.swift */; };
+		C37DC5FF2C2945CC00FAFC9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC5FE2C2945CC00FAFC9E /* SceneDelegate.swift */; };
+		C37DC6012C2945CC00FAFC9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6002C2945CC00FAFC9E /* ViewController.swift */; };
+		C37DC6042C2945CC00FAFC9E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C37DC6032C2945CC00FAFC9E /* Base */; };
+		C37DC6072C2945CC00FAFC9E /* MultiShop_Collab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6052C2945CC00FAFC9E /* MultiShop_Collab.xcdatamodeld */; };
+		C37DC6092C2945CE00FAFC9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37DC6082C2945CE00FAFC9E /* Assets.xcassets */; };
+		C37DC60C2C2945CE00FAFC9E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C37DC60B2C2945CE00FAFC9E /* Base */; };
+		C37DC6172C2945CE00FAFC9E /* MultiShop_CollabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6162C2945CE00FAFC9E /* MultiShop_CollabTests.swift */; };
+		C37DC6212C2945CE00FAFC9E /* MultiShop_CollabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6202C2945CE00FAFC9E /* MultiShop_CollabUITests.swift */; };
+		C37DC6232C2945CE00FAFC9E /* MultiShop_CollabUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6222C2945CE00FAFC9E /* MultiShop_CollabUITestsLaunchTests.swift */; };
+		C37DC6382C29492B00FAFC9E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6372C29492B00FAFC9E /* NetworkManager.swift */; };
+		C37DC63A2C29496100FAFC9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC6392C29496100FAFC9E /* Constants.swift */; };
+		C37DC63C2C29497C00FAFC9E /* protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC63B2C29497C00FAFC9E /* protocols.swift */; };
+		C37DC63E2C2949DE00FAFC9E /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC63D2C2949DE00FAFC9E /* Extentions.swift */; };
+		FBA1ED3D4CFDF51A394789B3 /* Pods_MultiShop_Collab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D6FD7878828BF96A7D0177 /* Pods_MultiShop_Collab.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C37DC6132C2945CE00FAFC9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C37DC5F12C2945CC00FAFC9E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C37DC5F82C2945CC00FAFC9E;
+			remoteInfo = "MultiShop-Collab";
+		};
+		C37DC61D2C2945CE00FAFC9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C37DC5F12C2945CC00FAFC9E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C37DC5F82C2945CC00FAFC9E;
+			remoteInfo = "MultiShop-Collab";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10E7451B77EADE66A8AF869A /* Pods_MultiShop_CollabTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultiShop_CollabTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26E44CDD42061FCC6878CC40 /* Pods-MultiShop-CollabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-CollabTests.debug.xcconfig"; path = "Target Support Files/Pods-MultiShop-CollabTests/Pods-MultiShop-CollabTests.debug.xcconfig"; sourceTree = "<group>"; };
+		53D6FD7878828BF96A7D0177 /* Pods_MultiShop_Collab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultiShop_Collab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B588D20A9E7FF544C426160 /* Pods_MultiShop_Collab_MultiShop_CollabUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultiShop_Collab_MultiShop_CollabUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BD48927881D50E849EC9871 /* Pods-MultiShop-CollabTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-CollabTests.release.xcconfig"; path = "Target Support Files/Pods-MultiShop-CollabTests/Pods-MultiShop-CollabTests.release.xcconfig"; sourceTree = "<group>"; };
+		94F76E3EBEFC2EA45D72BDF8 /* Pods-MultiShop-Collab-MultiShop-CollabUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-Collab-MultiShop-CollabUITests.debug.xcconfig"; path = "Target Support Files/Pods-MultiShop-Collab-MultiShop-CollabUITests/Pods-MultiShop-Collab-MultiShop-CollabUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A19A3A60BC50C92E5D73A3EC /* Pods-MultiShop-Collab-MultiShop-CollabUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-Collab-MultiShop-CollabUITests.release.xcconfig"; path = "Target Support Files/Pods-MultiShop-Collab-MultiShop-CollabUITests/Pods-MultiShop-Collab-MultiShop-CollabUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C37DC5F92C2945CC00FAFC9E /* MultiShop-Collab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MultiShop-Collab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37DC5FC2C2945CC00FAFC9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C37DC5FE2C2945CC00FAFC9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C37DC6002C2945CC00FAFC9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C37DC6032C2945CC00FAFC9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C37DC6062C2945CC00FAFC9E /* MultiShop_Collab.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MultiShop_Collab.xcdatamodel; sourceTree = "<group>"; };
+		C37DC6082C2945CE00FAFC9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C37DC60B2C2945CE00FAFC9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C37DC60D2C2945CE00FAFC9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C37DC6122C2945CE00FAFC9E /* MultiShop-CollabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MultiShop-CollabTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37DC6162C2945CE00FAFC9E /* MultiShop_CollabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiShop_CollabTests.swift; sourceTree = "<group>"; };
+		C37DC61C2C2945CE00FAFC9E /* MultiShop-CollabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MultiShop-CollabUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37DC6202C2945CE00FAFC9E /* MultiShop_CollabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiShop_CollabUITests.swift; sourceTree = "<group>"; };
+		C37DC6222C2945CE00FAFC9E /* MultiShop_CollabUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiShop_CollabUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C37DC6372C29492B00FAFC9E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C37DC6392C29496100FAFC9E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C37DC63B2C29497C00FAFC9E /* protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocols.swift; sourceTree = "<group>"; };
+		C37DC63D2C2949DE00FAFC9E /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		D14F2B59F59BB4AD8436F048 /* Pods-MultiShop-Collab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-Collab.debug.xcconfig"; path = "Target Support Files/Pods-MultiShop-Collab/Pods-MultiShop-Collab.debug.xcconfig"; sourceTree = "<group>"; };
+		FDE3909E738A0990D677D7AC /* Pods-MultiShop-Collab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-Collab.release.xcconfig"; path = "Target Support Files/Pods-MultiShop-Collab/Pods-MultiShop-Collab.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C37DC5F62C2945CC00FAFC9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBA1ED3D4CFDF51A394789B3 /* Pods_MultiShop_Collab.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37DC60F2C2945CE00FAFC9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AE301898110638C382F35DF /* Pods_MultiShop_CollabTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37DC6192C2945CE00FAFC9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				965E379830C6AF138B967B07 /* Pods_MultiShop_Collab_MultiShop_CollabUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2403D1E699084AE1E15A7AA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D14F2B59F59BB4AD8436F048 /* Pods-MultiShop-Collab.debug.xcconfig */,
+				FDE3909E738A0990D677D7AC /* Pods-MultiShop-Collab.release.xcconfig */,
+				94F76E3EBEFC2EA45D72BDF8 /* Pods-MultiShop-Collab-MultiShop-CollabUITests.debug.xcconfig */,
+				A19A3A60BC50C92E5D73A3EC /* Pods-MultiShop-Collab-MultiShop-CollabUITests.release.xcconfig */,
+				26E44CDD42061FCC6878CC40 /* Pods-MultiShop-CollabTests.debug.xcconfig */,
+				8BD48927881D50E849EC9871 /* Pods-MultiShop-CollabTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		970C462B1606017852A6F95C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53D6FD7878828BF96A7D0177 /* Pods_MultiShop_Collab.framework */,
+				5B588D20A9E7FF544C426160 /* Pods_MultiShop_Collab_MultiShop_CollabUITests.framework */,
+				10E7451B77EADE66A8AF869A /* Pods_MultiShop_CollabTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C37DC5F02C2945CC00FAFC9E = {
+			isa = PBXGroup;
+			children = (
+				C37DC5FB2C2945CC00FAFC9E /* MultiShop-Collab */,
+				C37DC6152C2945CE00FAFC9E /* MultiShop-CollabTests */,
+				C37DC61F2C2945CE00FAFC9E /* MultiShop-CollabUITests */,
+				C37DC5FA2C2945CC00FAFC9E /* Products */,
+				2403D1E699084AE1E15A7AA6 /* Pods */,
+				970C462B1606017852A6F95C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C37DC5FA2C2945CC00FAFC9E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C37DC5F92C2945CC00FAFC9E /* MultiShop-Collab.app */,
+				C37DC6122C2945CE00FAFC9E /* MultiShop-CollabTests.xctest */,
+				C37DC61C2C2945CE00FAFC9E /* MultiShop-CollabUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C37DC5FB2C2945CC00FAFC9E /* MultiShop-Collab */ = {
+			isa = PBXGroup;
+			children = (
+				C37DC6362C29486400FAFC9E /* UI */,
+				C37DC6352C29485400FAFC9E /* ViewControllers */,
+				C37DC6322C29481D00FAFC9E /* Common */,
+				C37DC6312C29480700FAFC9E /* ViewModels */,
+				C37DC6302C2947F900FAFC9E /* Models */,
+				C37DC62F2C2947E700FAFC9E /* NetworkManager */,
+				C37DC5FC2C2945CC00FAFC9E /* AppDelegate.swift */,
+				C37DC5FE2C2945CC00FAFC9E /* SceneDelegate.swift */,
+				C37DC6002C2945CC00FAFC9E /* ViewController.swift */,
+				C37DC6022C2945CC00FAFC9E /* Main.storyboard */,
+				C37DC6082C2945CE00FAFC9E /* Assets.xcassets */,
+				C37DC60A2C2945CE00FAFC9E /* LaunchScreen.storyboard */,
+				C37DC60D2C2945CE00FAFC9E /* Info.plist */,
+				C37DC6052C2945CC00FAFC9E /* MultiShop_Collab.xcdatamodeld */,
+			);
+			path = "MultiShop-Collab";
+			sourceTree = "<group>";
+		};
+		C37DC6152C2945CE00FAFC9E /* MultiShop-CollabTests */ = {
+			isa = PBXGroup;
+			children = (
+				C37DC6162C2945CE00FAFC9E /* MultiShop_CollabTests.swift */,
+			);
+			path = "MultiShop-CollabTests";
+			sourceTree = "<group>";
+		};
+		C37DC61F2C2945CE00FAFC9E /* MultiShop-CollabUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C37DC6202C2945CE00FAFC9E /* MultiShop_CollabUITests.swift */,
+				C37DC6222C2945CE00FAFC9E /* MultiShop_CollabUITestsLaunchTests.swift */,
+			);
+			path = "MultiShop-CollabUITests";
+			sourceTree = "<group>";
+		};
+		C37DC62F2C2947E700FAFC9E /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				C37DC6372C29492B00FAFC9E /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		C37DC6302C2947F900FAFC9E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C37DC6312C29480700FAFC9E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C37DC6322C29481D00FAFC9E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C37DC6392C29496100FAFC9E /* Constants.swift */,
+				C37DC63B2C29497C00FAFC9E /* protocols.swift */,
+				C37DC63D2C2949DE00FAFC9E /* Extentions.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C37DC6352C29485400FAFC9E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C37DC6362C29486400FAFC9E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C37DC5F82C2945CC00FAFC9E /* MultiShop-Collab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C37DC6262C2945CE00FAFC9E /* Build configuration list for PBXNativeTarget "MultiShop-Collab" */;
+			buildPhases = (
+				A8E95FFDEB55D222D25E5E14 /* [CP] Check Pods Manifest.lock */,
+				C37DC5F52C2945CC00FAFC9E /* Sources */,
+				C37DC5F62C2945CC00FAFC9E /* Frameworks */,
+				C37DC5F72C2945CC00FAFC9E /* Resources */,
+				C60D7223432BE874C69DBEDF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MultiShop-Collab";
+			productName = "MultiShop-Collab";
+			productReference = C37DC5F92C2945CC00FAFC9E /* MultiShop-Collab.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C37DC6112C2945CE00FAFC9E /* MultiShop-CollabTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C37DC6292C2945CE00FAFC9E /* Build configuration list for PBXNativeTarget "MultiShop-CollabTests" */;
+			buildPhases = (
+				BDFB948C94D90DACF86B9E2C /* [CP] Check Pods Manifest.lock */,
+				C37DC60E2C2945CE00FAFC9E /* Sources */,
+				C37DC60F2C2945CE00FAFC9E /* Frameworks */,
+				C37DC6102C2945CE00FAFC9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C37DC6142C2945CE00FAFC9E /* PBXTargetDependency */,
+			);
+			name = "MultiShop-CollabTests";
+			productName = "MultiShop-CollabTests";
+			productReference = C37DC6122C2945CE00FAFC9E /* MultiShop-CollabTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C37DC61B2C2945CE00FAFC9E /* MultiShop-CollabUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C37DC62C2C2945CE00FAFC9E /* Build configuration list for PBXNativeTarget "MultiShop-CollabUITests" */;
+			buildPhases = (
+				3AE22CFBCE77AEBCAEF845A0 /* [CP] Check Pods Manifest.lock */,
+				C37DC6182C2945CE00FAFC9E /* Sources */,
+				C37DC6192C2945CE00FAFC9E /* Frameworks */,
+				C37DC61A2C2945CE00FAFC9E /* Resources */,
+				C74469626E530E697FD6DE40 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C37DC61E2C2945CE00FAFC9E /* PBXTargetDependency */,
+			);
+			name = "MultiShop-CollabUITests";
+			productName = "MultiShop-CollabUITests";
+			productReference = C37DC61C2C2945CE00FAFC9E /* MultiShop-CollabUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C37DC5F12C2945CC00FAFC9E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					C37DC5F82C2945CC00FAFC9E = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					C37DC6112C2945CE00FAFC9E = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = C37DC5F82C2945CC00FAFC9E;
+					};
+					C37DC61B2C2945CE00FAFC9E = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = C37DC5F82C2945CC00FAFC9E;
+					};
+				};
+			};
+			buildConfigurationList = C37DC5F42C2945CC00FAFC9E /* Build configuration list for PBXProject "MultiShop-Collab" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C37DC5F02C2945CC00FAFC9E;
+			productRefGroup = C37DC5FA2C2945CC00FAFC9E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C37DC5F82C2945CC00FAFC9E /* MultiShop-Collab */,
+				C37DC6112C2945CE00FAFC9E /* MultiShop-CollabTests */,
+				C37DC61B2C2945CE00FAFC9E /* MultiShop-CollabUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C37DC5F72C2945CC00FAFC9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37DC6092C2945CE00FAFC9E /* Assets.xcassets in Resources */,
+				C37DC60C2C2945CE00FAFC9E /* Base in Resources */,
+				C37DC6042C2945CC00FAFC9E /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37DC6102C2945CE00FAFC9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37DC61A2C2945CE00FAFC9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3AE22CFBCE77AEBCAEF845A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MultiShop-Collab-MultiShop-CollabUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8E95FFDEB55D222D25E5E14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MultiShop-Collab-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDFB948C94D90DACF86B9E2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MultiShop-CollabTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C60D7223432BE874C69DBEDF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultiShop-Collab/Pods-MultiShop-Collab-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultiShop-Collab/Pods-MultiShop-Collab-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MultiShop-Collab/Pods-MultiShop-Collab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C74469626E530E697FD6DE40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultiShop-Collab-MultiShop-CollabUITests/Pods-MultiShop-Collab-MultiShop-CollabUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultiShop-Collab-MultiShop-CollabUITests/Pods-MultiShop-Collab-MultiShop-CollabUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MultiShop-Collab-MultiShop-CollabUITests/Pods-MultiShop-Collab-MultiShop-CollabUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C37DC5F52C2945CC00FAFC9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37DC6012C2945CC00FAFC9E /* ViewController.swift in Sources */,
+				C37DC63C2C29497C00FAFC9E /* protocols.swift in Sources */,
+				C37DC5FD2C2945CC00FAFC9E /* AppDelegate.swift in Sources */,
+				C37DC6382C29492B00FAFC9E /* NetworkManager.swift in Sources */,
+				C37DC63E2C2949DE00FAFC9E /* Extentions.swift in Sources */,
+				C37DC6072C2945CC00FAFC9E /* MultiShop_Collab.xcdatamodeld in Sources */,
+				C37DC5FF2C2945CC00FAFC9E /* SceneDelegate.swift in Sources */,
+				C37DC63A2C29496100FAFC9E /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37DC60E2C2945CE00FAFC9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37DC6172C2945CE00FAFC9E /* MultiShop_CollabTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37DC6182C2945CE00FAFC9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37DC6212C2945CE00FAFC9E /* MultiShop_CollabUITests.swift in Sources */,
+				C37DC6232C2945CE00FAFC9E /* MultiShop_CollabUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C37DC6142C2945CE00FAFC9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C37DC5F82C2945CC00FAFC9E /* MultiShop-Collab */;
+			targetProxy = C37DC6132C2945CE00FAFC9E /* PBXContainerItemProxy */;
+		};
+		C37DC61E2C2945CE00FAFC9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C37DC5F82C2945CC00FAFC9E /* MultiShop-Collab */;
+			targetProxy = C37DC61D2C2945CE00FAFC9E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C37DC6022C2945CC00FAFC9E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C37DC6032C2945CC00FAFC9E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C37DC60A2C2945CE00FAFC9E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C37DC60B2C2945CE00FAFC9E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C37DC6242C2945CE00FAFC9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C37DC6252C2945CE00FAFC9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C37DC6272C2945CE00FAFC9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D14F2B59F59BB4AD8436F048 /* Pods-MultiShop-Collab.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MultiShop-Collab/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "wcg.MultiShop-Collab";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C37DC6282C2945CE00FAFC9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDE3909E738A0990D677D7AC /* Pods-MultiShop-Collab.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MultiShop-Collab/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "wcg.MultiShop-Collab";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C37DC62A2C2945CE00FAFC9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26E44CDD42061FCC6878CC40 /* Pods-MultiShop-CollabTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "wcg.MultiShop-CollabTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MultiShop-Collab.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MultiShop-Collab";
+			};
+			name = Debug;
+		};
+		C37DC62B2C2945CE00FAFC9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BD48927881D50E849EC9871 /* Pods-MultiShop-CollabTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "wcg.MultiShop-CollabTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MultiShop-Collab.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MultiShop-Collab";
+			};
+			name = Release;
+		};
+		C37DC62D2C2945CE00FAFC9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94F76E3EBEFC2EA45D72BDF8 /* Pods-MultiShop-Collab-MultiShop-CollabUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "wcg.MultiShop-CollabUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MultiShop-Collab";
+			};
+			name = Debug;
+		};
+		C37DC62E2C2945CE00FAFC9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A19A3A60BC50C92E5D73A3EC /* Pods-MultiShop-Collab-MultiShop-CollabUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "wcg.MultiShop-CollabUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MultiShop-Collab";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C37DC5F42C2945CC00FAFC9E /* Build configuration list for PBXProject "MultiShop-Collab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C37DC6242C2945CE00FAFC9E /* Debug */,
+				C37DC6252C2945CE00FAFC9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C37DC6262C2945CE00FAFC9E /* Build configuration list for PBXNativeTarget "MultiShop-Collab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C37DC6272C2945CE00FAFC9E /* Debug */,
+				C37DC6282C2945CE00FAFC9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C37DC6292C2945CE00FAFC9E /* Build configuration list for PBXNativeTarget "MultiShop-CollabTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C37DC62A2C2945CE00FAFC9E /* Debug */,
+				C37DC62B2C2945CE00FAFC9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C37DC62C2C2945CE00FAFC9E /* Build configuration list for PBXNativeTarget "MultiShop-CollabUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C37DC62D2C2945CE00FAFC9E /* Debug */,
+				C37DC62E2C2945CE00FAFC9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C37DC6052C2945CC00FAFC9E /* MultiShop_Collab.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C37DC6062C2945CC00FAFC9E /* MultiShop_Collab.xcdatamodel */,
+			);
+			currentVersion = C37DC6062C2945CC00FAFC9E /* MultiShop_Collab.xcdatamodel */;
+			path = MultiShop_Collab.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C37DC5F12C2945CC00FAFC9E /* Project object */;
+}
