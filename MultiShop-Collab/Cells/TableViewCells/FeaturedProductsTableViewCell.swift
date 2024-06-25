@@ -7,7 +7,14 @@
 
 import UIKit
 
+
+protocol productsCollectionViewDelegate {
+    func didSelectProduct(at index: IndexPath)
+}
+
 class FeaturedProductsTableViewCell: UITableViewCell {
+    
+    var delegate:productsCollectionViewDelegate!
 
     var productsImages = ["product-1","product-2","product-3","product-4","product-5","product-6","product-7","product-8","product-9"]
 
@@ -44,6 +51,12 @@ extension FeaturedProductsTableViewCell: UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: productsCollectionView.frame.width/2 - 6, height: 340)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        delegate.didSelectProduct(at: indexPath)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

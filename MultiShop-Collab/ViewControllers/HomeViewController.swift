@@ -8,7 +8,7 @@
 import UIKit
 
 
-class HomeViewController: UIViewController  {
+class HomeViewController: UIViewController, productsCollectionViewDelegate  {
 
     
     @IBOutlet weak var mainTableView: UITableView!
@@ -65,10 +65,21 @@ extension HomeViewController:UITableViewDataSource, UITableViewDelegate {
         
         let productsTblCell = mainTableView.dequeueReusableCell(withIdentifier: "FeaturedProductsTableViewCell") as! FeaturedProductsTableViewCell
         
+        productsTblCell.delegate = self
+        
         productsTblCell.productsCollectionView.reloadData()
         
         productsTblCell.selectionStyle = .none
         
         return productsTblCell
+    }
+    
+    
+    func didSelectProduct(at index: IndexPath) {
+        let productDetailsScreen = self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailsViewController") as! ProductDetailsViewController
+        
+        productDetailsScreen.productId = index
+        
+        self.navigationController?.pushViewController(productDetailsScreen, animated: true)
     }
 }
