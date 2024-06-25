@@ -10,6 +10,10 @@ import UIKit
 class AddressTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lbAddress: UILabel!
+    @IBOutlet weak var addressIcon: UIImageView!
+    @IBOutlet weak var lbAddressType: UILabel!
+    
+    var typeOfAddress = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,8 +22,15 @@ class AddressTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
+        if typeOfAddress == "Home"{
+            addressIcon.image = .home
+        }else if typeOfAddress == "Office" {
+            addressIcon.image = .officeBuilding
+        }else {
+            addressIcon.image = .location
+        }
+        
     }
 
 }

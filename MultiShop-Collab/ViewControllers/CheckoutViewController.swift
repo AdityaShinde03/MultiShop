@@ -16,13 +16,15 @@ class CheckoutViewController: UIViewController {
     var totalAmount: String!
     
     var userSelectedAddress = "Ganesh Meridian, Thaltej"
+    var checkoutDetails : CheckoutDetails!
+    
+    var cartData = [] as [Cart]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         CheckTableView.delegate = self
         CheckTableView.dataSource = self
-        CheckTableView.showsVerticalScrollIndicator = false
         
         setupUI()
     }
@@ -35,7 +37,17 @@ class CheckoutViewController: UIViewController {
         moveToSelectAddress()
     }
     
+    @IBAction func actionYourOrders(_ sender: Any) {
+        moveToOrderListing()
+    }
+    
+    
     @IBAction func actionPlaceOrder(_ sender: Any) {
+        
+        let checkoutObj = CheckoutDetails(cartData: cartData, deliveryAddress: userSelectedAddress, orderDate: "23-06-2024")
+        
+        OrderDataUser.checkoutData = checkoutObj
+        
         alertUser(message: "Your Order Placed Successfully!!")
     }
     
@@ -45,6 +57,7 @@ class CheckoutViewController: UIViewController {
 extension CheckoutViewController {
     func setupUI(){
         btnBack.makeCircle()
+        CheckTableView.showsVerticalScrollIndicator = false
     }
     
     
@@ -53,10 +66,17 @@ extension CheckoutViewController {
         selectAddress.addressDelegate = self
         self.navigationController?.pushViewController(selectAddress, animated: true)
     }
+    
+    func moveToOrderListing(){
+        let orders = UIStoryboard(name: "OrderListing", bundle: nibBundle).instantiateViewController(withIdentifier: "OrderListingViewController") as! OrderListingViewController
+        
+        
+        self.navigationController?.pushViewController(orders, animated: true)
+    }
 }
 
 extension CheckoutViewController: SaveAddress {
-    func saveUserAddress(address: String) {
+    func saveUserAddress(address: String, type: String) {
         userSelectedAddress = address
         CheckTableView.reloadData()
     }
@@ -75,7 +95,7 @@ extension CheckoutViewController : UITableViewDataSource, UITableViewDelegate{
             return cell
         }else{
             let cell = CheckTableView.dequeueReusableCell(withIdentifier: "PlaceOrderTableViewCell", for: indexPath) as! PlaceOrderTableViewCell
-            cell.lbPaymentAmount.text = totalAmount
+            cell.lbPaymentAmount.text = "$" + totalAmount
             cell.lbTotalProducts.text = totalProduct
             return cell
         }

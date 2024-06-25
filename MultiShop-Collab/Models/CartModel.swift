@@ -14,4 +14,5 @@ struct Cart {
     var productQuantity: Int?
     var productStatus: String?
     var productPrice: Int?
+    
 }

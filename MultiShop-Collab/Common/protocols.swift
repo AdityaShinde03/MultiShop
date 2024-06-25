@@ -13,3 +13,11 @@ protocol QuantityDelegate {
     func substractQuantity(index: Int)
     func showQuantityTotal()
 }
+
+protocol OrderListingDelegate {
+    func placeOrder(checkoutData: CheckoutDetails)
+}
+
+protocol SaveAddress{
+    func saveUserAddress(address: String, type: String)
+}

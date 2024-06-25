@@ -35,7 +35,8 @@ class CartViewController: UIViewController {
     var cartData = [] as [Cart]
     var totalPayableAmount: String!
     
-    
+    // Products in Cart with Available Status.
+    var totalProductsInCart : Int!
     
     // MARK: - View Methods
     override func viewDidLoad() {
@@ -57,11 +58,11 @@ class CartViewController: UIViewController {
     
     // MARK: - IB Actions
     @IBAction func actionBack(_ sender: Any) {
-        
+        moveToPreviousScreen()
     }
     
     @IBAction func actionProceedToCheckout(_ sender: Any) {
-        if cartData.count > 0 {
+        if totalProductsInCart > 0 {
             moveToCheckOut()
         }else{
             alertUser(message: "Empty Cart")
@@ -92,7 +93,8 @@ extension CartViewController {
     func moveToCheckOut(){
         let checkout = self.storyboard?.instantiateViewController(withIdentifier: "CheckoutViewController") as! CheckoutViewController
         checkout.totalAmount = totalPayableAmount
-        checkout.totalProduct = "\(cartData.count)"
+        checkout.totalProduct = "\(totalProductsInCart!)"
+        checkout.cartData = cartData
         self.navigationController?.pushViewController(checkout, animated: true)
     }
 }
@@ -115,7 +117,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         cell.imageProduct.image = UIImage(named: cartData[index].productImage!)
     
         cell.lbName.text = productName[index]
-        cell.lbPrice.text = "Rs. \(cartData[index].productPrice ?? 0)"
+        cell.lbPrice.text = "$\(cartData[index].productPrice ?? 0)"
         
         if cartData[index].productStatus == "Available" {
             cell.lbStatus.backgroundColor = .statusAvailable
@@ -131,7 +133,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 134
+        return 159
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -168,10 +170,12 @@ extension CartViewController : QuantityDelegate {
     
     func showQuantityTotal(){
         var total = 0
+        totalProductsInCart = 0
         if cartData.count > 0{
             for index in 0...cartData.count - 1 {
                 if cartData[index].productStatus == "Available"{
                     total += cartData[index].productPrice! * cartData[index].productQuantity!
+                    totalProductsInCart += 1
                 }else{
                     total += 0
                 }
@@ -181,7 +185,7 @@ extension CartViewController : QuantityDelegate {
         }
         
         totalPayableAmount = "\(total)"
-        lbTotal.text = "Total Cart Amount: Rs. \(total)"
+        lbTotal.text = "Total Cart Amount: $\(total)"
     }
     
     

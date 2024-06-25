@@ -10,8 +10,13 @@ import UIKit
 class SelectAddressViewController: UIViewController {
 
     @IBOutlet weak var AddressTableView: UITableView!
+    @IBOutlet weak var btnBack: UIButton!
+    
+    
     
     var userAddresses = ["St. Lucia, Kingston, United kingdom", "12 A, Kattegat, Norway", "Hundred Street, Wessex, England"]
+    var userAddressType = ["Home", "Office", "Other"]
+    //var addressIcons = []
     var addressDelegate : SaveAddress!
     
     override func viewDidLoad() {
@@ -19,7 +24,9 @@ class SelectAddressViewController: UIViewController {
 
         AddressTableView.delegate = self
         AddressTableView.dataSource = self
-        AddressTableView.showsVerticalScrollIndicator = false
+        
+        
+        setupUI()
         
         // Do any additional setup after loading the view.
     }
@@ -31,18 +38,6 @@ class SelectAddressViewController: UIViewController {
     @IBAction func actionBack(_ sender: Any) {
         moveToPreviousScreen()
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -53,13 +48,14 @@ extension SelectAddressViewController : UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = AddressTableView.dequeueReusableCell(withIdentifier: "AddressTableViewCell", for: indexPath) as! AddressTableViewCell
-        
+        cell.typeOfAddress = userAddressType[indexPath.row]
+        cell.lbAddressType.text = userAddressType[indexPath.row]
         cell.lbAddress.text = userAddresses[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        addressDelegate.saveUserAddress(address: userAddresses[indexPath.row])
+        addressDelegate.saveUserAddress(address: userAddresses[indexPath.row], type: userAddressType[indexPath.row])
         moveToPreviousScreen()
     }
 }
@@ -74,11 +70,17 @@ extension SelectAddressViewController{
         enterAddress.view.backgroundColor = UIColor(white: 0.9, alpha: 0.3)
         present(enterAddress, animated: true)
     }
+    
+    func setupUI(){
+        btnBack.makeCircle()
+        AddressTableView.showsVerticalScrollIndicator = false
+    }
 }
 
 extension SelectAddressViewController: SaveAddress{
-    func saveUserAddress(address: String) {
+    func saveUserAddress(address: String, type: String) {
         userAddresses.append(address)
+        userAddressType.append(type)
         AddressTableView.reloadData()
     }
 }
