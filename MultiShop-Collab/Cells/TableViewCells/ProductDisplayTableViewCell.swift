@@ -33,8 +33,6 @@ class ProductDisplayTableViewCell: UITableViewCell {
         
         productDisplayCollectionViewCell.delegate = self
         productDisplayCollectionViewCell.dataSource = self
-        
-        pageControl.numberOfPages = 5
 
     }
 

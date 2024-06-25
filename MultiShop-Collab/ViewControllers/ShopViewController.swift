@@ -31,6 +31,7 @@ class ShopViewController: UIViewController  {
         
         filteredProductsArr = productsArr
         
+        self.navigationController?.isNavigationBarHidden = true
         shopCollectionView.delegate = self
         shopCollectionView.dataSource = self
         
@@ -38,9 +39,22 @@ class ShopViewController: UIViewController  {
         searchBar.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     
     @IBAction func onFilterBtnPressed(_ sender: Any) {
         print("pressed filter")
+        
+        let filtersScreen = self.storyboard?.instantiateViewController(withIdentifier: "FiltersViewController") as! FiltersViewController
+        
+        self.navigationController?.pushViewController(filtersScreen, animated: true)
+        
     }
     
 }

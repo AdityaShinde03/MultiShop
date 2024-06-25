@@ -28,7 +28,7 @@ class CategoriesTableViewCell: UITableViewCell{
 
 }
 
-extension CategoriesTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate  {
+extension CategoriesTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 8

@@ -39,11 +39,11 @@ extension SuggestedProductsTableViewCell: UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: suggestedProductsCollectionView.frame.width/2 - 6, height: suggestedProductsCollectionView.frame.height)
+        CGSize(width: suggestedProductsCollectionView.frame.width/2 - 8, height: suggestedProductsCollectionView.frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        6
+        8
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
