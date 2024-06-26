@@ -19,14 +19,14 @@ class ProfileViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func actionYourOrders(_ sender: Any) {
+        moveToOrderListing()
     }
-    */
+    
+    func moveToOrderListing(){
+        print("move to order listing")
+        let orders = UIStoryboard(name: "OrderListing", bundle: nibBundle).instantiateViewController(withIdentifier: "OrderListingViewController") as! OrderListingViewController
+        self.navigationController?.pushViewController(orders, animated: true)
+    }
 
 }

@@ -24,19 +24,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cU3-gD-08m">
-                                            <rect key="frame" x="15" y="15" width="40" height="40"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="4EG-JI-a5b"/>
-                                                <constraint firstAttribute="width" constant="40" id="EuM-2S-skJ"/>
-                                            </constraints>
-                                            <color key="tintColor" name="AppBlack"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="gray" image="chevron.left" catalog="system"/>
-                                            <connections>
-                                                <action selector="actionBack:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="B3K-db-AUu"/>
-                                            </connections>
-                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Cart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhQ-r2-vul">
                                             <rect key="frame" x="148" y="10" width="119.99999999999997" height="50"/>
                                             <constraints>
@@ -50,8 +37,6 @@
                                     </subviews>
                                     <color key="backgroundColor" name="AppYellow"/>
                                     <constraints>
-                                        <constraint firstItem="cU3-gD-08m" firstAttribute="top" secondItem="PsU-D3-bdf" secondAttribute="top" constant="15" id="Llw-Co-ZPM"/>
-                                        <constraint firstItem="cU3-gD-08m" firstAttribute="leading" secondItem="PsU-D3-bdf" secondAttribute="leading" constant="15" id="NJa-m5-gq3"/>
                                         <constraint firstItem="lhQ-r2-vul" firstAttribute="top" secondItem="PsU-D3-bdf" secondAttribute="top" constant="10" id="OXW-c6-33K"/>
                                         <constraint firstItem="lhQ-r2-vul" firstAttribute="centerX" secondItem="PsU-D3-bdf" secondAttribute="centerX" constant="11.5" id="nQx-DG-po4"/>
                                     </constraints>
@@ -245,7 +230,6 @@
                     <navigationItem key="navigationItem" id="7QA-pB-RsE"/>
                     <connections>
                         <outlet property="CartTableView" destination="1vt-wv-qGs" id="N9M-4I-Fs5"/>
-                        <outlet property="btnBack" destination="cU3-gD-08m" id="FIA-iZ-xDs"/>
                         <outlet property="btnProceedToCheckout" destination="1Hu-IW-T1X" id="51D-Fq-Beb"/>
                         <outlet property="lbTotal" destination="CVB-a3-uhx" id="OyR-mc-4N7"/>
                     </connections>
@@ -292,28 +276,13 @@
                                                 <action selector="actionBack:" destination="wew-Bk-fMk" eventType="touchUpInside" id="Ssf-26-Qah"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSF-H5-9os">
-                                            <rect key="frame" x="265" y="21" width="115" height="35"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="115" id="J0w-NQ-stP"/>
-                                                <constraint firstAttribute="height" constant="35" id="ihw-cT-DyX"/>
-                                            </constraints>
-                                            <color key="tintColor" name="AppBlack"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="gray" title="Your Orders"/>
-                                            <connections>
-                                                <action selector="actionYourOrders:" destination="wew-Bk-fMk" eventType="touchUpInside" id="Efk-j9-i8Q"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" name="AppYellow"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="iSF-H5-9os" secondAttribute="trailing" constant="13" id="2eh-OK-PFN"/>
                                         <constraint firstItem="3gg-rn-vu5" firstAttribute="leading" secondItem="TXl-fE-nTL" secondAttribute="leading" constant="15" id="KvV-fx-Vdl"/>
                                         <constraint firstItem="3gg-rn-vu5" firstAttribute="top" secondItem="TXl-fE-nTL" secondAttribute="top" constant="15" id="Nwa-hM-Uen"/>
                                         <constraint firstItem="XCV-6u-tlt" firstAttribute="top" secondItem="TXl-fE-nTL" secondAttribute="top" constant="22" id="VEL-UX-ScA"/>
                                         <constraint firstItem="XCV-6u-tlt" firstAttribute="centerX" secondItem="TXl-fE-nTL" secondAttribute="centerX" id="o9M-Sr-3m6"/>
-                                        <constraint firstItem="iSF-H5-9os" firstAttribute="top" secondItem="TXl-fE-nTL" secondAttribute="top" constant="21" id="uXd-0t-KqY"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
@@ -778,7 +747,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

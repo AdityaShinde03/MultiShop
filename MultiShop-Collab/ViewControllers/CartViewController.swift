@@ -14,7 +14,7 @@ class CartViewController: UIViewController {
     // MARK: - IB Outlets
     
     //HeaderView Table View
-    @IBOutlet weak var btnBack: UIButton!
+    //@IBOutlet weak var btnBack: UIButton!
     
     // TableView
     @IBOutlet weak var CartTableView: UITableView!
@@ -57,9 +57,6 @@ class CartViewController: UIViewController {
     }
     
     // MARK: - IB Actions
-    @IBAction func actionBack(_ sender: Any) {
-        moveToPreviousScreen()
-    }
     
     @IBAction func actionProceedToCheckout(_ sender: Any) {
         if totalProductsInCart > 0 {
@@ -77,7 +74,7 @@ class CartViewController: UIViewController {
 // MARK: - All Extensions
 extension CartViewController {
     func setupUI(){
-        btnBack.makeCircle()
+        //btnBack.makeCircle()
         CartTableView.showsVerticalScrollIndicator = false
     }
     
@@ -109,24 +106,25 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = CartTableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
         
         let index = indexPath.row
+        let cartProduct = cartData[index]
         cell.delegate = self
         
         cell.btnPlus.tag = indexPath.row + 1
         cell.btnMinus.tag = indexPath.row + 1
         
-        cell.imageProduct.image = UIImage(named: cartData[index].productImage!)
+        cell.imageProduct.image = UIImage(named: cartProduct.productImage!)
     
-        cell.lbName.text = productName[index]
-        cell.lbPrice.text = "$\(cartData[index].productPrice ?? 0)"
+        cell.lbName.text = cartProduct.productName
+        cell.lbPrice.text = "$\(cartProduct.productPrice ?? 0)"
         
-        if cartData[index].productStatus == "Available" {
+        if cartProduct.productStatus == "Available" {
             cell.lbStatus.backgroundColor = .statusAvailable
         }else {
             cell.lbStatus.backgroundColor = .statusNotAvailable
         }
         
-        cell.lbStatus.text = cartData[index].productStatus
-        cell.lbQty.text = "\(cartData[index].productQuantity!)"
+        cell.lbStatus.text = cartProduct.productStatus
+        cell.lbQty.text = "\(cartProduct.productQuantity!)"
         //cell.isAvailable = productStatus[index]
         
         return cell

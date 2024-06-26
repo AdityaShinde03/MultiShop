@@ -37,14 +37,14 @@ class CheckoutViewController: UIViewController {
         moveToSelectAddress()
     }
     
-    @IBAction func actionYourOrders(_ sender: Any) {
-        moveToOrderListing()
-    }
-    
     
     @IBAction func actionPlaceOrder(_ sender: Any) {
         
-        let checkoutObj = CheckoutDetails(cartData: cartData, deliveryAddress: userSelectedAddress, orderDate: "23-06-2024")
+        let mainCartData = filterCartData()
+        
+        let checkoutObj = CheckoutDetails(cartData: mainCartData, deliveryAddress: userSelectedAddress, orderDate: "23-06-2024")
+        
+        print("mainCartdata", mainCartData.count)
         
         OrderDataUser.checkoutData = checkoutObj
         
@@ -60,18 +60,18 @@ extension CheckoutViewController {
         CheckTableView.showsVerticalScrollIndicator = false
     }
     
+    func filterCartData() -> [Cart] {
+        let mainCartData = cartData.filter { cart in
+            return cart.productStatus == "Available"
+        }
+        
+        return mainCartData
+    }
     
     func moveToSelectAddress(){
         let selectAddress = self.storyboard?.instantiateViewController(withIdentifier: "SelectAddressViewController") as! SelectAddressViewController
         selectAddress.addressDelegate = self
         self.navigationController?.pushViewController(selectAddress, animated: true)
-    }
-    
-    func moveToOrderListing(){
-        let orders = UIStoryboard(name: "OrderListing", bundle: nibBundle).instantiateViewController(withIdentifier: "OrderListingViewController") as! OrderListingViewController
-        
-        
-        self.navigationController?.pushViewController(orders, animated: true)
     }
 }
 
