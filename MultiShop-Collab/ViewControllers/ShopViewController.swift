@@ -41,13 +41,10 @@ class ShopViewController: UIViewController  {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
-        NotificationCenter.default.post(name: Notification.Name("TimerOpen"), object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
-        // Post notification
-        NotificationCenter.default.post(name: Notification.Name("TimerClose"), object: nil)
     }
     
     

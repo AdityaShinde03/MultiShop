@@ -34,9 +34,9 @@ class ProductDisplayTableViewCell: UITableViewCell {
         productDisplayCollectionViewCell.delegate = self
         productDisplayCollectionViewCell.dataSource = self
         
-        NotificationCenter.default.addObserver(self, selector: #selector(onCloseTimer), name: Notification.Name("TimerClose"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onCloseTimer), name: Notification.Name("TimerClose1"), object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(onOpenTimer), name: Notification.Name("TimerOpen"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onOpenTimer), name: Notification.Name("TimerOpen1"), object: nil)
 
     }
 

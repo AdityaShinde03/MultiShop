@@ -41,10 +41,12 @@ class ProductDetailsViewController: UIViewController, ProductDisplayDelegate{
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+        NotificationCenter.default.post(name: Notification.Name("TimerOpen1"), object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+        NotificationCenter.default.post(name: Notification.Name("TimerClose1"), object: nil)
     }
     
     override func viewWillLayoutSubviews() {
