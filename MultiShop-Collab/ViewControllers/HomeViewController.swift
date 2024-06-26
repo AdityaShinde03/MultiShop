@@ -28,6 +28,17 @@ class HomeViewController: UIViewController, productsCollectionViewDelegate  {
 
         mainTableView.reloadData()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+
+        // Post notification
+        NotificationCenter.default.post(name: Notification.Name("TimerClose"), object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.post(name: Notification.Name("TimerOpen"), object: nil)
+    }
 
 
 }

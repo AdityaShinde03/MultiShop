@@ -33,6 +33,10 @@ class ProductDisplayTableViewCell: UITableViewCell {
         
         productDisplayCollectionViewCell.delegate = self
         productDisplayCollectionViewCell.dataSource = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(onCloseTimer), name: Notification.Name("TimerClose"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(onOpenTimer), name: Notification.Name("TimerOpen"), object: nil)
 
     }
 
@@ -44,19 +48,29 @@ class ProductDisplayTableViewCell: UITableViewCell {
     
     @objc func automaticScrollImage() {
         
-        if currentPage < totalCount {
+        if currentPage < totalCount * 1000 {
                   let index = IndexPath.init(item: currentPage, section: 0)
                   self.productDisplayCollectionViewCell.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
-                  pageControl.currentPage = currentPage
+            print(currentPage)
+            pageControl.currentPage = currentPage % totalCount
                   currentPage += 1
-             } else {
-                  currentPage = 0
-                  let index = IndexPath.init(item: currentPage, section: 0)
-                  self.productDisplayCollectionViewCell.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
-                   pageControl.currentPage = currentPage
-                   currentPage = 1
-               }
+             }
+//        else {
+//                  currentPage = 0
+//                  let index = IndexPath.init(item: currentPage, section: 0)
+//                  self.productDisplayCollectionViewCell.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
+//                   pageControl.currentPage = currentPage
+//                   currentPage = 1
+//               }
         
+    }
+    
+    @objc func onCloseTimer(){
+        timer.invalidate()
+    }
+    
+    @objc func onOpenTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(automaticScrollImage), userInfo: nil, repeats: true)
     }
 
 }
@@ -64,7 +78,7 @@ class ProductDisplayTableViewCell: UITableViewCell {
 
 extension ProductDisplayTableViewCell:UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return totalCount
+        return totalCount * 1000
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -88,6 +102,6 @@ extension ProductDisplayTableViewCell:UICollectionViewDataSource, UICollectionVi
         let width = scrollView.frame.width
         currentPage = Int(scrollView.contentOffset.x / width)
         
-        pageControl.currentPage = currentPage
+        pageControl.currentPage = currentPage % totalCount
     }
 }

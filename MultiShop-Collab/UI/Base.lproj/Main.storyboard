@@ -541,6 +541,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuO-9o-KH2">
+                                <rect key="frame" x="16" y="75" width="67" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="6qf-fb-bhO"/>
+                                    <constraint firstAttribute="width" constant="67" id="T5I-fv-JL3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                <connections>
+                                    <action selector="onCloseBtnPressed:" destination="GpC-fs-pS2" eventType="touchUpInside" id="bz2-Uy-klM"/>
+                                </connections>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pXe-Ic-RcQ">
                                 <rect key="frame" x="0.0" y="110" width="393" height="708"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -576,18 +588,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuO-9o-KH2">
-                                <rect key="frame" x="16" y="75" width="67" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="6qf-fb-bhO"/>
-                                    <constraint firstAttribute="width" constant="67" id="T5I-fv-JL3"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
-                                <connections>
-                                    <action selector="onCloseBtnPressed:" destination="GpC-fs-pS2" eventType="touchUpInside" id="bz2-Uy-klM"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nAV-ov-9hP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
