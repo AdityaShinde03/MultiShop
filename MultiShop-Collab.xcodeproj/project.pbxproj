@@ -107,7 +107,7 @@
 		C37ED76B2C29866B00BC2DF2 /* FeaturedProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C37ED76D2C29914000BC2DF2 /* DynamicHeightCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCollectionView.swift; sourceTree = "<group>"; };
 		C37ED76F2C29A13B00BC2DF2 /* ShopProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopProductsCollectionViewCell.swift; sourceTree = "<group>"; };
-		C37ED7712C29A8D800BC2DF2 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductModel.swift; path = "MultiShop-Collab/Cells/CollectionViewCells/ProductModel.swift"; sourceTree = SOURCE_ROOT; };
+		C37ED7712C29A8D800BC2DF2 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductModel.swift; path = "MultiShop-Collab/Models/ProductModel.swift"; sourceTree = SOURCE_ROOT; };
 		C37ED7732C29AFC600BC2DF2 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		C3898F752C2A801A0029181E /* ProductDisplayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDisplayTableViewCell.swift; sourceTree = "<group>"; };
 		C3898F772C2A81740029181E /* ProductDisplayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDisplayCollectionViewCell.swift; sourceTree = "<group>"; };
