@@ -46,7 +46,11 @@ class CheckoutViewController: UIViewController {
         
         print("mainCartdata", mainCartData.count)
         
+        
+        
         OrderDataUser.checkoutData = checkoutObj
+        
+        OrderDataUser.userCartArr = []
         
         alertUser(message: "Your Order Placed Successfully!!")
     }
