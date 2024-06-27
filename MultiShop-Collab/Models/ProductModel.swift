@@ -10,7 +10,9 @@ import UIKit
 
 
 struct Product {
+    let id: Int
     let title: String
     let image: String
     let price: String
+    var isAddedToCart: Bool
 }

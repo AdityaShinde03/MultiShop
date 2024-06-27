@@ -9,19 +9,9 @@ import UIKit
 
 class ProductDetailsViewController: UIViewController {
     
-    var productsArr  = [
-        Product(title: "Camera", image: "product-1", price: "123.00"),
-        Product(title: "T-shirt", image: "product-2", price: "100.00"),
-        Product(title: "Lamp", image: "product-3", price: "153.00"),
-        Product(title: "Shoes", image: "product-4", price: "60.00"),
-        Product(title: "Drone", image: "product-5", price: "150.00"),
-        Product(title: "Watch", image: "product-6", price: "15.00"),
-        Product(title: "Dress", image: "product-7", price: "99.00"),
-        Product(title: "Cosmetics", image: "product-8", price: "300.00"),
-        Product(title: "Chair", image: "product-9", price: "200.00"),
-    ]
+    var productsArr  = OrderDataUser.Products
 
-    var productId : IndexPath!
+    var productId : Int!
 
 
     @IBOutlet weak var productDetailsTableView: UITableView!
@@ -32,7 +22,7 @@ class ProductDetailsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.navigationController?.isNavigationBarHidden = false
-        self.navigationItem.title = productsArr[productId.row].title
+        self.navigationItem.title = productsArr[productId].title
         productDetailsTableView.delegate = self
         productDetailsTableView.dataSource = self
         
@@ -42,6 +32,8 @@ class ProductDetailsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
         NotificationCenter.default.post(name: Notification.Name("TimerOpen1"), object: nil)
+        
+        productDetailsTableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -69,7 +61,7 @@ extension ProductDetailsViewController:UITableViewDataSource, UITableViewDelegat
             let productDisplayCell = productDetailsTableView.dequeueReusableCell(withIdentifier: "ProductDisplayTableViewCell", for: indexPath) as! ProductDisplayTableViewCell
             
             productDisplayCell.delegate = self
-            productDisplayCell.product = productsArr[productId.row]
+            productDisplayCell.product = productsArr[productId]
             
             productDisplayCell.selectionStyle = .none
             productDisplayCell.productDisplayCollectionViewCell.reloadData()
@@ -77,11 +69,14 @@ extension ProductDetailsViewController:UITableViewDataSource, UITableViewDelegat
             return productDisplayCell
         }else if indexPath.row == 1 {
             let productChoicesCell = productDetailsTableView.dequeueReusableCell(withIdentifier: "ProductChoicesTableViewCell", for: indexPath) as! ProductChoicesTableViewCell
-            
             productChoicesCell.delegate = self
-            productChoicesCell.lblProductPrice.text = "$\(productsArr[productId.row].price)"
-            productChoicesCell.product = productsArr[productId.row]
+            productChoicesCell.lblProductPrice.text = "$\(productsArr[productId].price)"
+            productChoicesCell.pId = productId
+            productChoicesCell.btnAddToCart.tag = productId
+            productChoicesCell.product = productsArr[productId]
             productChoicesCell.selectionStyle = .none
+            
+            
             
             return productChoicesCell
         }
@@ -108,7 +103,7 @@ extension ProductDetailsViewController:UITableViewDataSource, UITableViewDelegat
     }
     
     func didAddToCart() {
-        alertUser(message: "\(productsArr[productId.row].title ) Added to cart successfully")
+        alertUser(message: "\(productsArr[productId].title ) Added to cart successfully")
     }
     
 }

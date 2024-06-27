@@ -63,6 +63,13 @@ extension UIViewController {
         let login = UIStoryboard(name: "Profile", bundle: nibBundle).instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
         navigationController?.pushViewController(login, animated: true)
     }
+    
+    func moveToProductsDetailsScreen(of index: Int){
+        let productDetailsScreen = UIStoryboard(name: "Main", bundle: nibBundle).instantiateViewController(withIdentifier: "ProductDetailsViewController") as! ProductDetailsViewController
+        
+        productDetailsScreen.productId =  index
+        navigationController?.pushViewController(productDetailsScreen, animated: true)
+    }
 }
 
 extension String {

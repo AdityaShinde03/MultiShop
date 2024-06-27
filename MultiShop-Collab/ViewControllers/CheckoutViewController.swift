@@ -58,7 +58,7 @@ class CheckoutViewController: UIViewController {
             
             
             
-            OrderDataUser.checkoutData = checkoutObj
+            OrderDataUser.checkoutData.append(checkoutObj) 
             
             OrderDataUser.userCartArr = []
             

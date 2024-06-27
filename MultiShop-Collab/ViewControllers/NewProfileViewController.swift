@@ -14,6 +14,7 @@ class NewProfileViewController: UIViewController {
     @IBOutlet weak var Headerview: UIView!
     @IBOutlet weak var ProfileTableView: UITableView!
     
+    @IBOutlet weak var lblUserName: UILabel!
     
     // Contact Details
     // Name
@@ -35,33 +36,22 @@ class NewProfileViewController: UIViewController {
         
         ProfileTableView.delegate = self
         ProfileTableView.dataSource = self
+        
+        ProfileTableView.separatorStyle = .none
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
         if Auth.isUserLoggedIn {
-            totalTableRow = 3
-            ProfileData = OrderDataUser.UserDetails
-            
             print("get Usrr Dewtails: ", Auth.getUserDetails())
             
             ProfileData = Auth.getUserDetails()
-//            ProfileData.Name = UserDefaults.standard.string(forKey: "Name")
-//            ProfileData.Email = UserDefaults.standard.string(forKey: "Email")
-//            ProfileData.Phone = UserDefaults.standard.string(forKey: "Phone")
-//            ProfileData.Address = UserDefaults.standard.string(forKey: "Address")
-            
-//            Name = UserDefaults.standard.string(forKey: "Name")
-//            Email = UserDefaults.standard.string(forKey: "Email")
-//            Phone = UserDefaults.standard.string(forKey: "Phone")
-//            Address = UserDefaults.standard.string(forKey: "Address")
-            
-        }else{
-            totalTableRow = 1
+            lblUserName.text = ProfileData.Name
         }
         
         Headerview.isHidden = false
+        ProfileTableView.tableHeaderView?.frame.size = CGSize(width: ProfileTableView.frame.width, height: 219.0)
         ProfileTableView.reloadData()
     }
     
@@ -74,6 +64,11 @@ class NewProfileViewController: UIViewController {
 extension NewProfileViewController:  UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if Auth.isUserLoggedIn {
+            totalTableRow = 3
+        }else{
+            totalTableRow = 1
+        }
         return totalTableRow
     }
     
@@ -81,7 +76,9 @@ extension NewProfileViewController:  UITableViewDelegate, UITableViewDataSource 
         if !Auth.isUserLoggedIn {
             let cell = ProfileTableView.dequeueReusableCell(withIdentifier: "GuestLoginTableViewCell", for: indexPath) as! GuestLoginTableViewCell
             
+            cell.selectionStyle = .none
             Headerview.isHidden = true
+            ProfileTableView.tableHeaderView?.frame.size = CGSize(width: ProfileTableView.frame.width, height: 50.0)
             
             return cell
         }else {
@@ -90,6 +87,7 @@ extension NewProfileViewController:  UITableViewDelegate, UITableViewDataSource 
             if index == 0 {
                 let cell = ProfileTableView.dequeueReusableCell(withIdentifier: "ContactDetailsTableViewCell", for: indexPath) as! ContactDetailsTableViewCell
                 
+                cell.selectionStyle = .none
                 cell.lbUserName.text = ProfileData.Name
                 cell.lbUserEmail.text = ProfileData.Email
                 cell.lbPhoneNumber.text = ProfileData.Phone
@@ -100,6 +98,7 @@ extension NewProfileViewController:  UITableViewDelegate, UITableViewDataSource 
                 
                 let cell = ProfileTableView.dequeueReusableCell(withIdentifier: "YourOrderTableViewCell", for: indexPath) as! YourOrderTableViewCell
                 
+                cell.selectionStyle = .none
                 cell.delegateToViewOrders = self
                 
                 return cell
@@ -107,6 +106,7 @@ extension NewProfileViewController:  UITableViewDelegate, UITableViewDataSource 
             } else {
                 let cell = ProfileTableView.dequeueReusableCell(withIdentifier: "LogoutTableViewCell", for: indexPath) as! LogoutTableViewCell
                 
+                cell.selectionStyle = .none
                 cell.delegateToLogout = self
                 return cell
                 

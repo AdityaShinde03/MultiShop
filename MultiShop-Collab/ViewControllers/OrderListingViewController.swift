@@ -60,14 +60,15 @@ extension OrderListingViewController {
 
 extension OrderListingViewController {
     func showUserOrders() {
-        let checkoutData = OrderDataUser.checkoutData!
+        let userCheckoutData = OrderDataUser.checkoutData!
         
-        for idx in 0...(checkoutData.cartData!.count) - 1 {
-            let cartObj = checkoutData.cartData![idx]
-            let orderObj = Orders(productName: cartObj.productName, orderDate: checkoutData.orderDate, deliveryDate: checkoutData.orderDate, deliveryAddress: checkoutData.deliveryAddress, productQuantity: "\(String(describing: cartObj.productQuantity!))", productImage: cartObj.productImage!)
-
-            ordersDataArr.append(orderObj)
-
+        for checkoutObj in userCheckoutData {
+            let checkoutData = checkoutObj
+            for idx in 0...(checkoutData.cartData!.count) - 1 {
+                let cartObj = checkoutData.cartData![idx]
+                let orderObj = Orders(productName: cartObj.productName, orderDate: checkoutData.orderDate, deliveryDate: checkoutData.orderDate, deliveryAddress: checkoutData.deliveryAddress, productQuantity: "\(String(describing: cartObj.productQuantity!))", productImage: cartObj.productImage!)
+                ordersDataArr.append(orderObj)
+            }
         }
         OrdersTableView.reloadData()
     }

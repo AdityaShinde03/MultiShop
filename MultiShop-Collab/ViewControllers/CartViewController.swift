@@ -33,8 +33,9 @@ class CartViewController: UIViewController {
     var productPrice = [45,45,30,100,80, 45,45,30,100]
     var productQuantity = [1,1,1,1,1,1,1,1,1]
     
-    var cartData = [] as [Cart]
+//    var cartData = [] as [Cart]
     var totalPayableAmount: String!
+    var isBtnDisabled = false
     
     // Products in Cart with Available Status.
     var totalProductsInCart : Int!
@@ -91,7 +92,7 @@ extension CartViewController {
     
     func setupData(){
         print("cart: ", OrderDataUser.userCartArr)
-        cartData = OrderDataUser.userCartArr
+//        cartData = OrderDataUser.userCartArr
         showQuantityTotal()
         CartTableView.reloadData()
     
@@ -101,7 +102,7 @@ extension CartViewController {
         let checkout = self.storyboard?.instantiateViewController(withIdentifier: "CheckoutViewController") as! CheckoutViewController
         checkout.totalAmount = totalPayableAmount
         checkout.totalProduct = "\(totalProductsInCart!)"
-        checkout.cartData = cartData
+        checkout.cartData = OrderDataUser.userCartArr
         self.navigationController?.pushViewController(checkout, animated: true)
     }
 }
@@ -109,14 +110,14 @@ extension CartViewController {
 // MARK: - Table View Delegates Extensions
 extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cartData.count
+        return OrderDataUser.userCartArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = CartTableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
         
         let index = indexPath.row
-        let cartProduct = cartData[index]
+        let cartProduct = OrderDataUser.userCartArr[index]
         cell.delegate = self
         
         cell.btnPlus.tag = indexPath.row + 1
@@ -129,9 +130,9 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         cell.lbStatus.applyCornerRadius(radius: 6.0)
         
         if cartProduct.productStatus == "Available" {
-            cell.lbStatus.backgroundColor = UIColor(named: "StatusAvailable")
+            cell.lbStatus.textColor = UIColor(named: "StatusAvailable")
         }else {
-            cell.lbStatus.backgroundColor = UIColor(named: "StatusNotAvailable")
+            cell.lbStatus.textColor = UIColor(named: "StatusNotAvailable")
         }
         
         cell.lbStatus.text = cartProduct.productStatus
@@ -141,13 +142,19 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        moveToProductsDetailsScreen(of: OrderDataUser.userCartArr[indexPath.row].productId!)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 159
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let removeData = UIContextualAction(style: .destructive, title: "Remove from Cart") { (action,view,completionHandler ) in
-            self.cartData.remove(at: indexPath.row)
+            let pId = OrderDataUser.userCartArr[indexPath.row].productId
+            OrderDataUser.userCartArr.remove(at: indexPath.row)
+            OrderDataUser.Products[pId!].isAddedToCart = false
             self.showQuantityTotal()
             self.CartTableView.reloadData()
         }
@@ -161,29 +168,36 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - Quantity Delegate Protocol Extension
 extension CartViewController : QuantityDelegate {
     func addQuantity(index: Int) {
-        cartData[index].productQuantity! += 1
+
+
+
+        OrderDataUser.userCartArr[index].productQuantity! += 1
+        if isBtnDisabled && OrderDataUser.userCartArr[index].productQuantity! > 1{
+            print("Working")
+            NotificationCenter.default.post(name: NSNotification.Name("enableMinusBtn"), object: nil)
+            isBtnDisabled = false
+        }
         showQuantityTotal()
         CartTableView.reloadData()
     }
     
     func substractQuantity(index: Int) {
-        if cartData[index].productQuantity! > 0{
-            cartData[index].productQuantity! -= 1
-            showQuantityTotal()
-            CartTableView.reloadData()
-            
-        }else{
-            alertUser(message: "Quantity Must be Greater Than Zero")
+        OrderDataUser.userCartArr[index].productQuantity! -= 1
+        if OrderDataUser.userCartArr[index].productQuantity! == 1 {
+            isBtnDisabled  =  true
+            NotificationCenter.default.post(name: NSNotification.Name("disableMinusBtn"), object: nil)
         }
+        showQuantityTotal()
+        CartTableView.reloadData()
     }
     
     func showQuantityTotal(){
         var total = 0
         totalProductsInCart = 0
-        if cartData.count > 0{
-            for index in 0...cartData.count - 1 {
-                if cartData[index].productStatus == "Available"{
-                    total += cartData[index].productPrice! * cartData[index].productQuantity!
+        if OrderDataUser.userCartArr.count > 0{
+            for index in 0...OrderDataUser.userCartArr.count - 1 {
+                if OrderDataUser.userCartArr[index].productStatus == "Available"{
+                    total += OrderDataUser.userCartArr[index].productPrice! * OrderDataUser.userCartArr[index].productQuantity!
                     totalProductsInCart += 1
                 }else{
                     total += 0

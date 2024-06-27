@@ -15,11 +15,13 @@ class ProductChoicesTableViewCell: UITableViewCell {
 
     var count = 0
     var product: Product!
+    var pId:Int = 0
     var quantity: String = "1"
     
     var delegate:ProductChoicesTblCellDelegate!
     
     
+    @IBOutlet weak var btnAddToCart: UIButton!
     @IBOutlet weak var lblProductPrice: UILabel!
     @IBOutlet var btnSizes: [UIButton]!
     @IBOutlet var btnColors: [UIButton]!
@@ -50,12 +52,24 @@ class ProductChoicesTableViewCell: UITableViewCell {
             sizeBtn.addTarget(self, action: #selector(onSizeBtnPressed), for: .touchUpInside)
             count += 1
         }
+        
+
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        if OrderDataUser.Products[pId].isAddedToCart == true {
+            btnAddToCart.isEnabled = false
+            btnAddToCart.setTitle("Added to Cart", for: .disabled)
+        }else{
+            btnAddToCart.isEnabled = true
+            btnAddToCart.setTitle("Add to Cart", for: .normal)
+        }
+        
+
     }
 
     @IBAction func stepperValueChange(_ sender: UIStepper) {
@@ -87,15 +101,20 @@ class ProductChoicesTableViewCell: UITableViewCell {
         }
     }
     
-    @IBAction func onAddToCartBtnPressed(_ sender: Any) {
+    @IBAction func onAddToCartBtnPressed(_ sender: UIButton) {
         
         let price = product.price.convertToInt()
+        OrderDataUser.Products[pId].isAddedToCart = true
         
-        let userCartProduct = Cart(productName: product.title, productImage: product.image, productQuantity: quantity.convertToInt() , productStatus: "Available", productPrice: price)
+        let userCartProduct = Cart(productId: pId,productName: product.title, productImage: product.image, productQuantity: quantity.convertToInt() , productStatus: "Available", productPrice: price)
         
         print("userCartProduct: ", userCartProduct)
         
         OrderDataUser.userCartArr.append(userCartProduct)
+        
+        sender.isEnabled = false
+        sender.setTitle("Added to Cart", for: .disabled)
+        
         delegate.didAddToCart()
     }
     

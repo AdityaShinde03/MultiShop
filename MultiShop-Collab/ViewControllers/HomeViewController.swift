@@ -90,9 +90,10 @@ extension HomeViewController:UITableViewDataSource, UITableViewDelegate {
     }
     
     
-    func didSelectProduct(at index: IndexPath) {
+    func didSelectProduct(at index: Int) {
         let productDetailsScreen = self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailsViewController") as! ProductDetailsViewController
         
+        print("productId",index)
         productDetailsScreen.productId = index
         
         self.navigationController?.pushViewController(productDetailsScreen, animated: true)

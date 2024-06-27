@@ -88,8 +88,24 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         if tfEmail.text == "" || tfPassword.text == "" {
             alertUser(message: "Every Fields are required")
             return false
+        }else if (tfEmail.text?.lengthExcludingWhiteSpaces())! <= 0 || (tfPassword.text?.lengthExcludingWhiteSpaces())! <= 0 {
+            alertUser(message: "Please enter valid entries")
+            return false
         }else{
-            return true
+            if tfEmail.text == Auth.getUserDetails().Email! {
+
+                if tfPassword.text == Auth.getUserDetails().Password! {
+                    return true
+                }
+                
+                alertUser(message: "Please enter correct password!!!")
+                return false
+                
+            }else{
+                alertUser(message: "Please Register yourself!!!")
+                return false
+            }
+            
         }
     }
     
@@ -118,7 +134,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func actionContinueAsGuest(_ sender: Any) {
         UserDefaults.standard.setValue(true, forKey: "userAsGuest")
         Auth.isUserLoggedIn = false
-        moveToMainScreen()
+        moveToPreviousScreen()
     }
 
 }
