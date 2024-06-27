@@ -23,10 +23,10 @@ class ProfileViewController: UIViewController {
         moveToOrderListing()
     }
     
-    func moveToOrderListing(){
-        print("move to order listing")
-        let orders = UIStoryboard(name: "OrderListing", bundle: nibBundle).instantiateViewController(withIdentifier: "OrderListingViewController") as! OrderListingViewController
-        self.navigationController?.pushViewController(orders, animated: true)
-    }
+//    func moveToOrderListing(){
+//        print("move to order listing")
+//        let orders = UIStoryboard(name: "OrderListing", bundle: nibBundle).instantiateViewController(withIdentifier: "OrderListingViewController") as! OrderListingViewController
+//        self.navigationController?.pushViewController(orders, animated: true)
+//    }
 
 }

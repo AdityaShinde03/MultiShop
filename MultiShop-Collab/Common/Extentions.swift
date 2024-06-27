@@ -33,6 +33,17 @@ extension UIViewController {
     func closePresenting(){
         self.dismiss(animated: true)
     }
+    
+    func moveToOrderListing(){
+        print("move to order listing")
+        let orders = UIStoryboard(name: "OrderListing", bundle: nibBundle).instantiateViewController(withIdentifier: "OrderListingViewController") as! OrderListingViewController
+        self.navigationController?.pushViewController(orders, animated: true)
+    }
+    
+    func moveToLoginPage(){
+        let login = UIStoryboard(name: "Profile", bundle: nibBundle).instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+        navigationController?.pushViewController(login, animated: true)
+    }
 }
 
 extension String {
@@ -54,6 +65,14 @@ extension String {
         let passwordCheck = NSPredicate(format: "SELF MATCHES %@",passwordRegx)
         return passwordCheck.evaluate(with: password)
 
+    }
+    
+    func compare(str string: String) -> Bool{
+        if self == string {
+            return true
+        }else {
+            return false
+        }
     }
     
     

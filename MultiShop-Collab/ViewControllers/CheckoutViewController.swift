@@ -40,19 +40,23 @@ class CheckoutViewController: UIViewController {
     
     @IBAction func actionPlaceOrder(_ sender: Any) {
         
-        let mainCartData = filterCartData()
-        
-        let checkoutObj = CheckoutDetails(cartData: mainCartData, deliveryAddress: userSelectedAddress, orderDate: "23-06-2024")
-        
-        print("mainCartdata", mainCartData.count)
-        
-        
-        
-        OrderDataUser.checkoutData = checkoutObj
-        
-        OrderDataUser.userCartArr = []
-        
-        alertUser(message: "Your Order Placed Successfully!!")
+        if Auth.isUserLoggedIn {
+            let mainCartData = filterCartData()
+            
+            let checkoutObj = CheckoutDetails(cartData: mainCartData, deliveryAddress: userSelectedAddress, orderDate: "23-06-2024")
+            
+            print("mainCartdata", mainCartData.count)
+            
+            
+            
+            OrderDataUser.checkoutData = checkoutObj
+            
+            OrderDataUser.userCartArr = []
+            
+            alertUser(message: "Your Order Placed Successfully!!")
+        }else {
+            alertUserToLogin()
+        }
     }
     
     
@@ -112,6 +116,22 @@ extension CheckoutViewController : UITableViewDataSource, UITableViewDelegate{
             return 233
         }
     }
+}
+
+extension CheckoutViewController {
+    func alertUserToLogin(){
+        let alertUserController = UIAlertController(title: "Login Required", message: "Kindly Login", preferredStyle: .alert)
+        alertUserController.addAction(UIAlertAction(title: "Ok", style: .default))
+        alertUserController.addAction(UIAlertAction(title: "Login", style: .cancel, handler: { alert in
+            self.moveToLoginPage()
+        }))
+        present(alertUserController, animated: true)
+    }
+    
+//    func moveToLoginScreen(){
+//        let login = UIStoryboard(name: "Profile", bundle: nibBundle).instantiateViewController(identifier: "SignInViewController") as! SignInViewController
+//        self.navigationController?.pushViewController(login, animated: true)
+//    }
 }
 
 

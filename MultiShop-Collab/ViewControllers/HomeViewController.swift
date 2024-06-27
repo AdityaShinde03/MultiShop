@@ -21,6 +21,8 @@ class HomeViewController: UIViewController, productsCollectionViewDelegate  {
         mainTableView.dataSource = self
         
         mainTableView.separatorStyle = .none
+        
+        Auth.isUserLoggedIn = UserDefaults.standard.bool(forKey: "hasUserLoggedIn")
     }
     
     override func viewWillLayoutSubviews() {

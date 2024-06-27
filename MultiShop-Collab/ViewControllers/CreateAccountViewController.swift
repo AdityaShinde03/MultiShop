@@ -21,6 +21,9 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var tfConfirmPassword: UITextField!
     
+    @IBOutlet weak var tfPhoneNumber: UITextField!
+    
+    @IBOutlet weak var txtViewDefaultAddress: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +37,10 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         MainView.layer.borderWidth = 1
         MainView.layer.borderColor = UIColor(named: "AppGray")?.cgColor
         MainView.applyCornerRadius(radius: 10)
+        
+        txtViewDefaultAddress.layer.borderWidth = 1
+        txtViewDefaultAddress.layer.borderColor = UIColor(named: "black")?.cgColor
+        txtViewDefaultAddress.applyCornerRadius(radius: 3)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardDidHideNotification, object: nil)
@@ -73,7 +80,11 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func actionCreateAccount(_ sender: Any) {
         if validateEntries(){
-//            alertUser(message: "Account Created!")
+            
+            Auth.register(name: tfName.text!, phone: tfPhoneNumber.text!, address: txtViewDefaultAddress.text, email: tfEmail.text!, password: tfPassword.text!)
+            
+            OrderDataUser.UserDetails = User.init(Name: tfName.text, Email: tfEmail.text, Phone: tfPhoneNumber.text, Address: txtViewDefaultAddress.text)
+            
             moveToPreviousScreen()
         }
     }
@@ -84,7 +95,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     
     
     func validateEntries() -> Bool{
-        if tfName.text == "" || tfEmail.text == "" || tfPassword.text == "" || tfConfirmPassword.text == "" {
+        if tfName.text == "" || tfEmail.text == "" || tfPassword.text == "" || tfConfirmPassword.text == "" || tfPhoneNumber.text == "" || txtViewDefaultAddress.text == "" {
             alertUser(message: "Every Fields are Required!")
             return false
             
@@ -101,15 +112,18 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         }else if !tfPassword.text!.isValidPassword(){
             alertUser(message: "Password Must have 1 uppercase, 1 lowercase, 1 alphabet, 1 special Charector, min 8 charectors")
             return false
+        }else if tfPhoneNumber.text?.count != 10 {
+            alertUser(message: "Enter Valid Phone Number")
+            return false
         }else{
             return true
         }
     }
     
-    func moveToLoginPage(){
-        let login = self.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
-        navigationController?.pushViewController(login, animated: true)
-    }
+//    func moveToLoginPage(){
+//        let login = self.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+//        navigationController?.pushViewController(login, animated: true)
+//    }
     
     @objc func keyboardWillShow(notification: NSNotification) {
         if let userInfo = notification.userInfo {
