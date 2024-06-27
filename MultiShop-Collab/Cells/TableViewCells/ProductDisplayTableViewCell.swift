@@ -46,6 +46,8 @@ class ProductDisplayTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // MARK: -  All objc methods
+    
     @objc func automaticScrollImage() {
         
         if currentPage < totalCount * 1000 {
@@ -75,7 +77,7 @@ class ProductDisplayTableViewCell: UITableViewCell {
 
 }
 
-
+// MARK: Extensions
 extension ProductDisplayTableViewCell:UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return totalCount * 1000
@@ -102,6 +104,6 @@ extension ProductDisplayTableViewCell:UICollectionViewDataSource, UICollectionVi
         let width = scrollView.frame.width
         currentPage = Int(scrollView.contentOffset.x / width)
         
-        pageControl.currentPage = currentPage % totalCount
+        pageControl.currentPage = currentPage
     }
 }

@@ -12,6 +12,7 @@ class OrderListingViewController: UIViewController  {
     
     @IBOutlet weak var viewNoDataFound: UIView!
     
+    @IBOutlet weak var ordersHeaderView: UIView!
     @IBOutlet weak var OrdersTableView: UITableView!
     @IBOutlet weak var btnBack: UIButton!
     
@@ -28,6 +29,10 @@ class OrderListingViewController: UIViewController  {
         OrdersTableView.dataSource = self
 
         setupUI()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        ordersHeaderView.applyBottomBorder(color: UIColor(named: "AppGray")!)
     }
 
     @IBAction func actionBack(_ sender: Any) {

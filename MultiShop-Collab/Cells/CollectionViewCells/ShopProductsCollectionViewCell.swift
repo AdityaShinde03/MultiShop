@@ -16,10 +16,13 @@ class ShopProductsCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        productView.layer.cornerRadius = 9.0
+        productView.layer.cornerRadius = 3.0
         productView.clipsToBounds = true
         
         productView.layer.borderColor = UIColor.lightGray.cgColor
         productView.layer.borderWidth = 1.0
+        
+        productView.dropShadow()
+        
     }
 }

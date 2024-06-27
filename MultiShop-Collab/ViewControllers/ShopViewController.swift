@@ -23,9 +23,12 @@ class ShopViewController: UIViewController  {
     
     var filteredProductsArr = [Product]()
     
+    @IBOutlet weak var shopHeaderView: UIView!
     @IBOutlet weak var shopCollectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var btnFilter: UIButton!
+    
+    // MARK: -  All View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,7 +50,11 @@ class ShopViewController: UIViewController  {
         self.navigationController?.isNavigationBarHidden = false
     }
     
+    override func viewDidLayoutSubviews() {
+        shopHeaderView.applyBottomBorder(color: UIColor(named: "AppGray")!)
+    }
     
+//  MARK: - IBActions
     @IBAction func onFilterBtnPressed(_ sender: Any) {
         print("pressed filter")
         
@@ -59,8 +66,8 @@ class ShopViewController: UIViewController  {
     
 }
 
-
-extension ShopViewController: UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate{
+// MARK: Extensions
+extension ShopViewController: UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return filteredProductsArr.count
     }
@@ -77,16 +84,16 @@ extension ShopViewController: UISearchBarDelegate, UICollectionViewDataSource, U
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: shopCollectionView.frame.width/3 - 6, height: 100 - 6)
+        return CGSize(width: shopCollectionView.frame.width/3 - 3, height: 200)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-         return 16
+         return 3
         
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-      return 6
+      return 3
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

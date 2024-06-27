@@ -41,7 +41,7 @@ class SliderTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+    // MARK: -  All objc methods
     @objc func automaticScrollImage() {
         
         if currentPage < carouselImages.count * 3000 {
@@ -71,6 +71,7 @@ class SliderTableViewCell: UITableViewCell {
 
 }
 
+// MARK: Extensions
 extension SliderTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return carouselImages.count * 3000

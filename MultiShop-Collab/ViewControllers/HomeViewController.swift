@@ -12,6 +12,8 @@ class HomeViewController: UIViewController, productsCollectionViewDelegate  {
 
     
     @IBOutlet weak var mainTableView: UITableView!
+    
+    // MARK: -  All View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         

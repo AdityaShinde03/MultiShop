@@ -13,6 +13,8 @@ class FiltersViewController: UIViewController{
     var filterOptions = [["$0 - $100","$100 - $200","$200 - $300","$300 - $400","$400 - $500"],["XS","S","M","L","XL"]]
 
     @IBOutlet weak var FiltersTableView: UITableView!
+
+    // MARK: -  All View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,12 +24,13 @@ class FiltersViewController: UIViewController{
         FiltersTableView.dataSource = self
     }
 
-
+    // MARK: - All IBActions
     @IBAction func onApplyFiltersBtnPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
 }
 
+// MARK: Extensions
 extension FiltersViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {

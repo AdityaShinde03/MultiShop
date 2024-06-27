@@ -17,6 +17,25 @@ extension UIView {
     func makeCircle(){
         self.applyCornerRadius(radius: self.frame.width / 2)
     }
+    
+    func applyBottomBorder(color: UIColor){
+        let bottomBorder = UIView(frame: CGRect(x: 0, y: self.frame.size.height - 1, width: self.frame.width, height: 1))
+        bottomBorder.backgroundColor = color
+        self.addSubview(bottomBorder)
+    }
+    
+    func dropShadow(scale: Bool = true) {
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowOffset = CGSize(width: -1, height: 1)
+        self.layer.shadowRadius = 1
+
+        self.layer.shadowPath = UIBezierPath(rect: bounds).cgPath
+        self.layer.shouldRasterize = true
+        self.layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+    }
+    
 }
 
 extension UIViewController {

@@ -23,6 +23,7 @@ class CartViewController: UIViewController {
     @IBOutlet weak var lbTotal: UILabel!
     @IBOutlet weak var btnProceedToCheckout: UIButton!
     
+    @IBOutlet weak var mycartHeaderView: UIView!
     // MARK: - Cart Data
     var productData = ["Shoes": 45, "T-shirt": 45, "Lamp": 30, "Drones": 100, "Speaker": 80] as [String: Any]
     
@@ -60,6 +61,10 @@ class CartViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setupData()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        mycartHeaderView.applyBottomBorder(color: UIColor(named: "AppGray")!)
     }
     
     // MARK: - IB Actions

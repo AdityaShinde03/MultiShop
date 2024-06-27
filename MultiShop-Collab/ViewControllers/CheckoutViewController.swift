@@ -12,6 +12,7 @@ class CheckoutViewController: UIViewController {
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var CheckTableView: UITableView!
     
+    @IBOutlet weak var checkoutHeaderView: UIView!
     var totalProduct: String!
     var totalAmount: String!
     
@@ -27,6 +28,14 @@ class CheckoutViewController: UIViewController {
         CheckTableView.dataSource = self
         
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    override func viewDidLayoutSubviews() {
+        checkoutHeaderView.applyBottomBorder(color: UIColor(named: "AppGray")!)
     }
     
     @IBAction func actionBack(_ sender: Any) {

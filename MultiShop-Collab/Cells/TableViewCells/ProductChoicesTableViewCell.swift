@@ -7,11 +7,17 @@
 
 import UIKit
 
+protocol ProductChoicesTblCellDelegate{
+    func didAddToCart()
+}
+
 class ProductChoicesTableViewCell: UITableViewCell {
 
     var count = 0
     var product: Product!
     var quantity: String = "1"
+    
+    var delegate:ProductChoicesTblCellDelegate!
     
     
     @IBOutlet weak var lblProductPrice: UILabel!
@@ -56,7 +62,7 @@ class ProductChoicesTableViewCell: UITableViewCell {
         lblQuantity.text = sender.value.description
         quantity = sender.value.description
     }
-    
+// MARK: - All objc methods
     @objc func onColorBtnPressed(_ sender:UIButton){
         for colorBtn in btnColors {
             if sender.tag == colorBtn.tag{
@@ -90,6 +96,7 @@ class ProductChoicesTableViewCell: UITableViewCell {
         print("userCartProduct: ", userCartProduct)
         
         OrderDataUser.userCartArr.append(userCartProduct)
+        delegate.didAddToCart()
     }
     
 }

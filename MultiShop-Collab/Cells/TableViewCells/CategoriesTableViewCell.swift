@@ -28,6 +28,7 @@ class CategoriesTableViewCell: UITableViewCell{
 
 }
 
+// MARK: Extensions
 extension CategoriesTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

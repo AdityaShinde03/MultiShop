@@ -12,6 +12,8 @@ class FeaturedProductsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var productView: UIView!
     @IBOutlet weak var productImg: UIImageView!
     
+    @IBOutlet weak var lblProductPrice: UILabel!
+    @IBOutlet weak var lblProductName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         
