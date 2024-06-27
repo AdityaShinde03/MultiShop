@@ -16,81 +16,28 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tfEmail: UITextField!
     
     @IBOutlet weak var tfPassword: UITextField!
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        SignInView.layer.borderWidth = 1
-        SignInView.layer.borderColor = UIColor(named: "AppGray")?.cgColor
-        SignInView.applyCornerRadius(radius: 10)
-        
-        
-        tfEmail.delegate = self
-        tfPassword.delegate = self
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardDidShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardDidHideNotification, object: nil)
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(endEditing))
-        
-        view.addGestureRecognizer(tap)
-        
-        // Do any additional setup after loading the view.
+        setupUI()
+        notifyKeyboardActivity()
+        addTapGesture()
     }
+
     
     deinit {
         NotificationCenter.default.removeObserver(self)
-    }
-    
-    @objc func endEditing(){
-        view.endEditing(true)
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        giveBorderToTextField(textField: textField, style: "Focus")
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        giveBorderToTextField(textField: textField, style: "Release")
-    }
-    
-    func giveBorderToTextField(textField: UITextField, style: String){
-        
-        
-        if style == "Focus" {
-            textField.layer.borderWidth = 1
-            textField.layer.borderColor = UIColor(named: "AppYellow")?.cgColor
-        }else{
-            textField.layer.borderWidth = 0
-            //textField.layer.borderColor = UIColor(named: "AppYellow")?.cgColor
-        }
-        
     }
     
     @IBAction func actionLogin(_ sender: Any) {
         if validateEntries() {
             Auth.login()
             moveToPreviousScreen()
-            //alertUser(message: "User Logged In")
-            //moveToMainScreen()
         }
     }
     
-    @IBAction func actionSignUp(_ sender: Any) {
-        //Auth.isUserLoggedIn = true
+    @IBAction func actionSignUp(_ sender: UIButton) {
         moveToCreateAccountPage()
-    }
-    
-    func validateEntries() -> Bool{
-        if tfEmail.text == "" || tfPassword.text == "" {
-            alertUser(message: "Every Fields are required")
-            return false
-        }else{
-            return true
-        }
     }
     
     func moveToCreateAccountPage(){
@@ -103,6 +50,71 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         navigationController?.pushViewController(mainScreen, animated: true)
     }
     
+
+    
+    @IBAction func actionContinueAsGuest(_ sender: Any) {
+        UserDefaults.standard.setValue(true, forKey: "userAsGuest")
+        Auth.isUserLoggedIn = false
+        moveToMainScreen()
+    }
+
+}
+
+extension SignInViewController {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        giveBorderToTextField(textField: textField, style: "Focus")
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        giveBorderToTextField(textField: textField, style: "Release")
+    }
+}
+
+extension SignInViewController {
+    
+    func notifyKeyboardActivity(){
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardDidHideNotification, object: nil)
+    }
+    
+    func addTapGesture(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(endEditing))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func setupUI(){
+        
+        tfEmail.delegate = self
+        tfPassword.delegate = self
+        
+        SignInView.layer.borderWidth = 1
+        SignInView.layer.borderColor = UIColor(named: "AppGray")?.cgColor
+        SignInView.applyCornerRadius(radius: 10)
+    }
+    
+    func validateEntries() -> Bool{
+        if tfEmail.text == "" || tfPassword.text == "" {
+            alertUser(message: "Every Fields are required")
+            return false
+        }else{
+            return true
+        }
+    }
+    
+    func giveBorderToTextField(textField: UITextField, style: String){
+            
+        if style == "Focus" {
+            textField.layer.borderWidth = 1
+            textField.layer.borderColor = UIColor(named: "AppYellow")?.cgColor
+        }else{
+            textField.layer.borderWidth = 0
+            //textField.layer.borderColor = UIColor(named: "AppYellow")?.cgColor
+        }
+        
+    }
+}
+
+extension SignInViewController {
     @objc func keyboardWillShow(notification: NSNotification) {
         if let userInfo = notification.userInfo {
                 let keyboardHeight = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as AnyObject).cgRectValue.size.height
@@ -115,10 +127,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         UIView.animate(withDuration: 0.2, animations: { self.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) })
     }
     
-    @IBAction func actionContinueAsGuest(_ sender: Any) {
-        UserDefaults.standard.setValue(true, forKey: "userAsGuest")
-        Auth.isUserLoggedIn = false
-        moveToMainScreen()
+    @objc func endEditing(){
+        view.endEditing(true)
     }
-
 }

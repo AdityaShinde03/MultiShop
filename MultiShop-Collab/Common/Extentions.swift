@@ -87,3 +87,14 @@ extension String {
     }
 }
 
+extension UITextField {
+    func giveBorderToTextField(style: String){
+        if style == "Focus" {
+            self.layer.borderWidth = 1
+            self.layer.borderColor = UIColor(named: "AppYellow")?.cgColor
+        }else{
+            self.layer.borderWidth = 0
+        }
+    }
+}
+

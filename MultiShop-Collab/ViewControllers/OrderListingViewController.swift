@@ -28,7 +28,11 @@ class OrderListingViewController: UIViewController  {
         OrdersTableView.dataSource = self
 
         setupUI()
+        
+        //calculateTimeDifference()
     }
+    
+
 
     @IBAction func actionBack(_ sender: Any) {
         moveToPreviousScreen()
@@ -93,6 +97,14 @@ extension OrderListingViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
     }
+}
+
+extension OrderListingViewController {
+//    func calculateTimeDifference(){
+//        let difference = Calendar.current.dateComponents([.hour, .minute], from: time1, to: time2)
+//        let formattedString = String(format: "%02ld%02ld", difference.hour!, difference.minute!)
+//        print(formattedString)
+//    }
 }
 
 

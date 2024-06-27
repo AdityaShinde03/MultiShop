@@ -10,7 +10,7 @@ import Foundation
 class OrderDataUser{
     static var checkoutData: CheckoutDetails!
     static var userCartArr: [Cart] = []
-    static var UserDetails: User!
+    //static var UserDetails: User!
 }
 
 class Auth {

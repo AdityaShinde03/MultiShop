@@ -28,19 +28,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tfName.delegate = self
-        tfEmail.delegate = self
-        tfPassword.delegate = self
-        tfConfirmPassword.delegate = self
-        
-        //MainView.borderStyle = .roundedRect
-        MainView.layer.borderWidth = 1
-        MainView.layer.borderColor = UIColor(named: "AppGray")?.cgColor
-        MainView.applyCornerRadius(radius: 10)
-        
-        txtViewDefaultAddress.layer.borderWidth = 1
-        txtViewDefaultAddress.layer.borderColor = UIColor(named: "black")?.cgColor
-        txtViewDefaultAddress.applyCornerRadius(radius: 3)
+        setupUI()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardDidHideNotification, object: nil)
@@ -53,38 +41,10 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self)
     }
 
-    @objc func endEditing(){
-        view.endEditing(true)
-    }
-
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        giveBorderToTextField(textField: textField, style: "Focus")
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        giveBorderToTextField(textField: textField, style: "Release")
-    }
-    
-    func giveBorderToTextField(textField: UITextField, style: String){
-        
-        
-        if style == "Focus" {
-            textField.layer.borderWidth = 1
-            textField.layer.borderColor = UIColor(named: "AppYellow")?.cgColor
-        }else{
-            textField.layer.borderWidth = 0
-            //textField.layer.borderColor = UIColor(named: "AppYellow")?.cgColor
-        }
-        
-    }
     
     @IBAction func actionCreateAccount(_ sender: Any) {
         if validateEntries(){
-            
             Auth.register(name: tfName.text!, phone: tfPhoneNumber.text!, address: txtViewDefaultAddress.text, email: tfEmail.text!, password: tfPassword.text!)
-            
-            OrderDataUser.UserDetails = User.init(Name: tfName.text, Email: tfEmail.text, Phone: tfPhoneNumber.text, Address: txtViewDefaultAddress.text)
-            
             moveToPreviousScreen()
         }
     }
@@ -92,14 +52,13 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     @IBAction func actionSignIn(_ sender: Any) {
         moveToPreviousScreen()
     }
-    
-    
+}
+
+extension CreateAccountViewController {
     func validateEntries() -> Bool{
         if tfName.text == "" || tfEmail.text == "" || tfPassword.text == "" || tfConfirmPassword.text == "" || tfPhoneNumber.text == "" || txtViewDefaultAddress.text == "" {
             alertUser(message: "Every Fields are Required!")
             return false
-            
-            
         }else if tfName.text?.lengthExcludingWhiteSpaces() == 0{
             alertUser(message: "White Spaces not allowed")
             return false
@@ -120,11 +79,34 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-//    func moveToLoginPage(){
-//        let login = self.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
-//        navigationController?.pushViewController(login, animated: true)
-//    }
+    func setupUI(){
+        tfName.delegate = self
+        tfEmail.delegate = self
+        tfPassword.delegate = self
+        tfConfirmPassword.delegate = self
+        
+        
+        MainView.layer.borderWidth = 1
+        MainView.layer.borderColor = UIColor(named: "AppGray")?.cgColor
+        MainView.applyCornerRadius(radius: 10)
+        
+        txtViewDefaultAddress.layer.borderWidth = 1
+        txtViewDefaultAddress.layer.borderColor = UIColor(named: "black")?.cgColor
+        txtViewDefaultAddress.applyCornerRadius(radius: 3)
+    }
+}
+
+extension CreateAccountViewController {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.giveBorderToTextField(style: "Focus")
+    }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.giveBorderToTextField(style: "Release")
+    }
+}
+
+extension CreateAccountViewController {
     @objc func keyboardWillShow(notification: NSNotification) {
         if let userInfo = notification.userInfo {
                 let keyboardHeight = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as AnyObject).cgRectValue.size.height
@@ -136,5 +118,10 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     @objc func keyboardWillHide(notification: NSNotification) {
         UIView.animate(withDuration: 0.2, animations: { self.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) })
     }
-
+    
+    @objc func endEditing(){
+        view.endEditing(true)
+    }
 }
+
+
