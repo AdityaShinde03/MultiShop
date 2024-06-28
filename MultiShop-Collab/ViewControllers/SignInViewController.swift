@@ -100,15 +100,21 @@ extension SignInViewController {
             alertUser(message: "Please enter valid entries")
             return false
         }else{
-            if tfEmail.text == Auth.getUserDetails().Email! {
-
-                if tfPassword.text == Auth.getUserDetails().Password! {
-                    return true
+            
+            if let email = Auth.getUserDetails().Email{
+                if tfEmail.text == email {
+                    
+                    if tfPassword.text == Auth.getUserDetails().Password! {
+                        return true
+                    }
+                    
+                    alertUser(message: "Please enter correct password!!!")
+                    return false
+                    
+                }else{
+                    alertUser(message: "Please Register yourself!!!")
+                    return false
                 }
-                
-                alertUser(message: "Please enter correct password!!!")
-                return false
-                
             }else{
                 alertUser(message: "Please Register yourself!!!")
                 return false
