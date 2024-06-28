@@ -53,17 +53,10 @@ class ProductDisplayTableViewCell: UITableViewCell {
         if currentPage < totalCount * 1000 {
                   let index = IndexPath.init(item: currentPage, section: 0)
                   self.productDisplayCollectionViewCell.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
-            print(currentPage)
+//            print(currentPage)
             pageControl.currentPage = currentPage % totalCount
                   currentPage += 1
              }
-//        else {
-//                  currentPage = 0
-//                  let index = IndexPath.init(item: currentPage, section: 0)
-//                  self.productDisplayCollectionViewCell.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
-//                   pageControl.currentPage = currentPage
-//                   currentPage = 1
-//               }
         
     }
     

@@ -47,17 +47,10 @@ class SliderTableViewCell: UITableViewCell {
         if currentPage < carouselImages.count * 3000 {
                   let index = IndexPath.init(item: currentPage, section: 0)
                   self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
-            print(currentPage)
+//            print(currentPage)
             pageControl.currentPage = currentPage % carouselImages.count
                   currentPage += 1
              }
-//        else {
-//                  currentPage = 0
-//                  let index = IndexPath.init(item: currentPage, section: 0)
-//                  self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
-//                   pageControl.currentPage = currentPage
-//                   currentPage = 1
-//               }
         
     }
     

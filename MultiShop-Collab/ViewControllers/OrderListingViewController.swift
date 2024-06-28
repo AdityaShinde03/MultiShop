@@ -48,7 +48,7 @@ extension OrderListingViewController {
         
         OrdersTableView.showsVerticalScrollIndicator = false
         
-        if OrderDataUser.checkoutData != nil {
+        if OrderDataUser.checkoutData.count != 0 {
             showUserOrders()
             viewNoDataFound.isHidden = true
         }else{
