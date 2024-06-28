@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uz3-LM-7wS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uz3-LM-7wS">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -45,16 +44,13 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Hu-IW-T1X">
-                                            <rect key="frame" x="102.66666666666669" y="41" width="188" height="35"/>
+                                            <rect key="frame" x="102.66666666666669" y="41" width="188" height="40"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="Ahy-HO-WJx"/>
+                                                <constraint firstAttribute="height" constant="40" id="Ahy-HO-WJx"/>
                                                 <constraint firstAttribute="width" constant="188" id="ak8-rr-zB2"/>
                                             </constraints>
                                             <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="filled" title="Proceed To Checkout">
-                                                <color key="baseForegroundColor" name="AppBlack"/>
-                                                <color key="baseBackgroundColor" name="AppYellow"/>
-                                            </buttonConfiguration>
+                                            <buttonConfiguration key="configuration" style="filled" title="Proceed To Checkout"/>
                                             <connections>
                                                 <action selector="actionProceedToCheckout:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lHU-uY-oea"/>
                                             </connections>
@@ -90,9 +86,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="159"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gc5-o9-vBk" userLabel="DetailsView">
-
-                                                            <rect key="frame" x="125" y="0.0" width="268" height="159"/>
-
+                                                            <rect key="frame" x="140" y="0.0" width="253" height="159"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXz-UK-Ili">
                                                                     <rect key="frame" x="0.0" y="63.666666666666657" width="100" height="20"/>
@@ -105,9 +99,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16y-hk-h5T">
-
-                                                                    <rect key="frame" x="0.0" y="7.9999999999999982" width="268" height="20.333333333333329"/>
-
+                                                                    <rect key="frame" x="0.0" y="7.9999999999999982" width="253" height="20.333333333333329"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -420,16 +412,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nU6-24-uyY">
-                                                    <rect key="frame" x="139.66666666666666" y="179" width="114" height="35"/>
+                                                    <rect key="frame" x="126.66666666666669" y="179" width="140" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="Fae-Io-K2E"/>
-                                                        <constraint firstAttribute="width" constant="114" id="J2h-zf-UM6"/>
+                                                        <constraint firstAttribute="height" constant="40" id="Fae-Io-K2E"/>
+                                                        <constraint firstAttribute="width" constant="140" id="J2h-zf-UM6"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="Place Order">
-                                                        <color key="baseForegroundColor" name="AppBlack"/>
-                                                        <color key="baseBackgroundColor" name="AppYellow"/>
-                                                    </buttonConfiguration>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Place Order"/>
                                                     <connections>
                                                         <action selector="actionPlaceOrder:" destination="LRu-yJ-K2e" eventType="touchUpInside" id="rGX-7v-D9f"/>
                                                         <action selector="actionPlaceOrder:" destination="wew-Bk-fMk" eventType="touchUpInside" id="xAq-8F-5QQ"/>
@@ -539,16 +528,13 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8u-9m-1B9">
-                                            <rect key="frame" x="140.66666666666666" y="21" width="112" height="35"/>
+                                            <rect key="frame" x="126.66666666666669" y="21" width="140" height="40"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="gtF-50-Jcr"/>
-                                                <constraint firstAttribute="width" constant="112" id="u4I-8X-lNV"/>
+                                                <constraint firstAttribute="height" constant="40" id="gtF-50-Jcr"/>
+                                                <constraint firstAttribute="width" constant="140" id="u4I-8X-lNV"/>
                                             </constraints>
                                             <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="filled" title="Add Adress">
-                                                <color key="baseForegroundColor" name="AppBlack"/>
-                                                <color key="baseBackgroundColor" name="AppYellow"/>
-                                            </buttonConfiguration>
+                                            <buttonConfiguration key="configuration" style="filled" title="Add Adress"/>
                                             <connections>
                                                 <action selector="actionAddAddress:" destination="w7f-ZO-Zrf" eventType="touchUpInside" id="1js-KB-BSF"/>
                                             </connections>
@@ -696,15 +682,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="br9-sO-OgR">
-                                        <rect key="frame" x="81" y="208" width="150" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" name="AppBlack"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="br9-sO-OgR">
+                                        <rect key="frame" x="88" y="204" width="150" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="5U7-P9-IzX"/>
+                                            <constraint firstAttribute="height" constant="40" id="FiB-VZ-7aD"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Save Address">
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="baseBackgroundColor" name="AppBlack"/>
-                                        </buttonConfiguration>
+                                        <buttonConfiguration key="configuration" style="gray" title="Save Address"/>
                                         <connections>
                                             <action selector="actionSaveAddress:" destination="0yF-hy-aap" eventType="touchUpInside" id="D8E-M0-qhf"/>
                                         </connections>
@@ -712,6 +697,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
+                                    <constraint firstItem="br9-sO-OgR" firstAttribute="centerX" secondItem="RxS-Iv-TTI" secondAttribute="centerX" id="5Z5-Vb-RcU"/>
                                     <constraint firstAttribute="trailing" secondItem="itP-mx-0TT" secondAttribute="trailing" id="6o8-Hb-fSW"/>
                                     <constraint firstItem="y2D-5I-csF" firstAttribute="leading" secondItem="RxS-Iv-TTI" secondAttribute="leading" id="AXY-dq-Jr5"/>
                                     <constraint firstAttribute="trailing" secondItem="y2D-5I-csF" secondAttribute="trailing" id="BFR-Gh-wKX"/>
@@ -719,6 +705,7 @@
                                     <constraint firstItem="itP-mx-0TT" firstAttribute="leading" secondItem="RxS-Iv-TTI" secondAttribute="leading" id="TQo-1Q-Mwq"/>
                                     <constraint firstItem="jKQ-CN-gF2" firstAttribute="leading" secondItem="RxS-Iv-TTI" secondAttribute="leading" id="W9K-08-Fe2"/>
                                     <constraint firstAttribute="trailing" secondItem="jKQ-CN-gF2" secondAttribute="trailing" id="ga3-iZ-KI9"/>
+                                    <constraint firstAttribute="bottom" secondItem="br9-sO-OgR" secondAttribute="bottom" constant="6" id="mno-nw-jE3"/>
                                     <constraint firstItem="y2D-5I-csF" firstAttribute="top" secondItem="RxS-Iv-TTI" secondAttribute="top" id="ova-vt-Jen"/>
                                     <constraint firstItem="itP-mx-0TT" firstAttribute="top" secondItem="y2D-5I-csF" secondAttribute="bottom" id="pnw-ZL-QsE"/>
                                     <constraint firstAttribute="height" constant="250" id="qC2-E1-OFD"/>
@@ -771,17 +758,14 @@
         <namedColor name="AppBlack">
             <color red="0.20499999821186066" green="0.22800000011920929" blue="0.25200000405311584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="AppYellow">
-            <color red="1" green="0.82700002193450928" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
