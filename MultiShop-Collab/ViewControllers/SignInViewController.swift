@@ -55,7 +55,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func actionContinueAsGuest(_ sender: Any) {
         UserDefaults.standard.setValue(true, forKey: "userAsGuest")
         Auth.isUserLoggedIn = false
-        moveToMainScreen()
+        moveToPreviousScreen()
     }
 
 }

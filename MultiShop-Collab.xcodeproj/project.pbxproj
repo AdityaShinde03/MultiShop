@@ -397,6 +397,7 @@
 				C37ED7612C296CF000BC2DF2 /* PoliciesTableViewCell.swift */,
 				C3AE79842C2BFEE800178014 /* OrderListingTableViewCell.swift */,
 				C3AE79822C2BFEDC00178014 /* DeliveryAddressTableViewCell.swift */,
+				C382D9A62C2C3F4E000AC985 /* GuestLoginTableViewCell.swift */,
 				C3E200B72C2D48CA00E90F85 /* ContactDetailsTableViewCell.swift */,
 				C3E200B82C2D48CA00E90F85 /* LogoutTableViewCell.swift */,
 				C3E200B92C2D48CB00E90F85 /* YourOrderTableViewCell.swift */,
