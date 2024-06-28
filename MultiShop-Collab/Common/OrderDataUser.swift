@@ -10,6 +10,7 @@ import Foundation
 class OrderDataUser{
     static var checkoutData: [CheckoutDetails]! = []
     static var userCartArr: [Cart] = []
+
     static var UserDetails: User!
     static var Products: [Product] = [
         Product(id: 0, title: "Camera", image: "product-1", price: "123.00", isAddedToCart: false),
@@ -22,6 +23,7 @@ class OrderDataUser{
         Product(id: 7, title: "Cosmetics", image: "product-8", price: "99.00",isAddedToCart: false),
         Product(id: 8, title: "Chair", image: "product-9", price: "300.00",isAddedToCart: false),
     ]
+
 }
 
 class Auth {
