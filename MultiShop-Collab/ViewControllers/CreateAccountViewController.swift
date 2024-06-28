@@ -91,8 +91,8 @@ extension CreateAccountViewController {
         MainView.applyCornerRadius(radius: 10)
         
         txtViewDefaultAddress.layer.borderWidth = 1
-        txtViewDefaultAddress.layer.borderColor = UIColor(named: "black")?.cgColor
-        txtViewDefaultAddress.applyCornerRadius(radius: 3)
+        txtViewDefaultAddress.layer.borderColor = UIColor(named: "AppGray")?.cgColor
+        txtViewDefaultAddress.applyCornerRadius(radius: 5)
     }
 }
 

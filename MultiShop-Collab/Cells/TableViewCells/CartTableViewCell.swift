@@ -14,6 +14,7 @@ class CartTableViewCell: UITableViewCell {
     // Views
     @IBOutlet weak var cellView: UIView!
     
+    
     //Labels
     @IBOutlet weak var lbStatus: UILabel!
     
@@ -32,8 +33,13 @@ class CartTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imageProduct: UIImageView!
     
+    @IBOutlet weak var viewQuantity: UIView!
+    
+    
     
     var delegate : QuantityDelegate!
+    
+    var btnIsDisabled: Bool = false
     //var productStatus = "Available"
     
     // MARK: - Table View Cell Methods
@@ -41,9 +47,7 @@ class CartTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        NotificationCenter.default.addObserver(self, selector: #selector(enableMinusBtn), name: NSNotification.Name("enableMinusBtn"), object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(disableMinusBtn), name: NSNotification.Name("disableMinusBtn"), object: nil)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -65,23 +69,16 @@ class CartTableViewCell: UITableViewCell {
     
     // MARK: - IB Actions
     @IBAction func actionPlus(_ sender: UIButton) {
+        
         delegate.addQuantity(index: sender.tag - 1)
         //print("clicked", sender.tag)
     }
     
     @IBAction func actionMinus(_ sender: UIButton) {
         delegate.substractQuantity(index: sender.tag - 1)
-        
     }
     
-    @objc func disableMinusBtn(){
-        lbQty.text = "1"
-        btnMinus.isEnabled = false
-    }
-    
-    @objc func enableMinusBtn(){
-        btnMinus.isEnabled = true
-    }
+
     
     
 
