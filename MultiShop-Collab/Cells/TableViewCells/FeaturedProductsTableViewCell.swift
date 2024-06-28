@@ -9,13 +9,14 @@ import UIKit
 
 
 protocol productsCollectionViewDelegate {
-    func didSelectProduct(at index: IndexPath)
+    func didSelectProduct(at index: Int)
 }
 
 class FeaturedProductsTableViewCell: UITableViewCell {
     
     var delegate:productsCollectionViewDelegate!
 
+    var productsArr  = OrderDataUser.Products
     var productsImages = ["product-1","product-2","product-3","product-4","product-5","product-6","product-7","product-8","product-9"]
 
     @IBOutlet weak var productsCollectionView: UICollectionView!
@@ -36,6 +37,7 @@ class FeaturedProductsTableViewCell: UITableViewCell {
 
 }
 
+// MARK: Extensions
 extension FeaturedProductsTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productsImages.count
@@ -44,18 +46,21 @@ extension FeaturedProductsTableViewCell: UICollectionViewDataSource, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let productsCollectionCell = productsCollectionView.dequeueReusableCell(withReuseIdentifier: "FeaturedProductsCollectionViewCell", for: indexPath) as!  FeaturedProductsCollectionViewCell
         
-        productsCollectionCell.productImg.image = UIImage(named: productsImages[indexPath.item])
+        let singleProduct = productsArr[indexPath.item]
         
+        productsCollectionCell.productImg.image = UIImage(named: singleProduct.image)
+        productsCollectionCell.lblProductName.text = singleProduct.title
+        productsCollectionCell.lblProductPrice.text = "$\(singleProduct.price)"
         return productsCollectionCell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: productsCollectionView.frame.width/2 - 6, height: 340)
+        return CGSize(width: productsCollectionView.frame.width/2 - 6, height: 300)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        delegate.didSelectProduct(at: indexPath)
+        delegate.didSelectProduct(at: indexPath.row)
         
     }
     

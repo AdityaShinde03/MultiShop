@@ -26,7 +26,7 @@ class SuggestedProductsTableViewCell: UITableViewCell {
 
 }
 
-
+// MARK: -  Extensions
 extension SuggestedProductsTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 9

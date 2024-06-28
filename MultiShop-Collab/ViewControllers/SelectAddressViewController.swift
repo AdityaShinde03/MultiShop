@@ -12,6 +12,7 @@ class SelectAddressViewController: UIViewController {
     @IBOutlet weak var AddressTableView: UITableView!
     @IBOutlet weak var btnBack: UIButton!
     
+    @IBOutlet weak var addressHeaderView: UIView!
     
     
     var userAddresses = ["St. Lucia, Kingston, United kingdom", "12 A, Kattegat, Norway", "Hundred Street, Wessex, England"]
@@ -29,6 +30,15 @@ class SelectAddressViewController: UIViewController {
         setupUI()
         
         // Do any additional setup after loading the view.
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewDidLayoutSubviews() {
+        addressHeaderView.applyBottomBorder(color: UIColor(named: "AppGray")!)
     }
     
     @IBAction func actionAddAddress(_ sender: Any) {

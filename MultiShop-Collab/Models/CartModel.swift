@@ -9,6 +9,7 @@ import Foundation
 
 
 struct Cart {
+    var productId: Int?
     var productName: String?
     var productImage: String?
     var productQuantity: Int?

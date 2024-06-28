@@ -13,5 +13,6 @@ struct User {
     var Email: String?
     var Phone: String?
     var Address: String?
+    var Password: String?
     
 }

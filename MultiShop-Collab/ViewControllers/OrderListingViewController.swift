@@ -12,6 +12,7 @@ class OrderListingViewController: UIViewController  {
     
     @IBOutlet weak var viewNoDataFound: UIView!
     
+    @IBOutlet weak var ordersHeaderView: UIView!
     @IBOutlet weak var OrdersTableView: UITableView!
     @IBOutlet weak var btnBack: UIButton!
     
@@ -33,6 +34,9 @@ class OrderListingViewController: UIViewController  {
     }
     
 
+    override func viewDidLayoutSubviews() {
+        ordersHeaderView.applyBottomBorder(color: UIColor(named: "AppGray")!)
+    }
 
     @IBAction func actionBack(_ sender: Any) {
         moveToPreviousScreen()
@@ -47,7 +51,7 @@ extension OrderListingViewController {
         
         OrdersTableView.showsVerticalScrollIndicator = false
         
-        if OrderDataUser.checkoutData != nil {
+        if OrderDataUser.checkoutData.count != 0 {
             showUserOrders()
             viewNoDataFound.isHidden = true
         }else{
@@ -59,14 +63,15 @@ extension OrderListingViewController {
 
 extension OrderListingViewController {
     func showUserOrders() {
-        let checkoutData = OrderDataUser.checkoutData!
+        let userCheckoutData = OrderDataUser.checkoutData!
         
-        for idx in 0...(checkoutData.cartData!.count) - 1 {
-            let cartObj = checkoutData.cartData![idx]
-            let orderObj = Orders(productName: cartObj.productName, orderDate: checkoutData.orderDate, deliveryDate: checkoutData.orderDate, deliveryAddress: checkoutData.deliveryAddress, productQuantity: "\(String(describing: cartObj.productQuantity!))", productImage: cartObj.productImage!)
-
-            ordersDataArr.append(orderObj)
-
+        for checkoutObj in userCheckoutData {
+            let checkoutData = checkoutObj
+            for idx in 0...(checkoutData.cartData!.count) - 1 {
+                let cartObj = checkoutData.cartData![idx]
+                let orderObj = Orders(productName: cartObj.productName, orderDate: checkoutData.orderDate, deliveryDate: checkoutData.orderDate, deliveryAddress: checkoutData.deliveryAddress, productQuantity: "\(String(describing: cartObj.productQuantity!))", productImage: cartObj.productImage!)
+                ordersDataArr.append(orderObj)
+            }
         }
         OrdersTableView.reloadData()
     }

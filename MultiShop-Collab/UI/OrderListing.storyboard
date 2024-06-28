@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,7 +12,7 @@
         <!--Order Listing View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="OrderListingViewController" id="Y6W-OH-hqX" customClass="OrderListingViewController" customModule="MultiShop_Collab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderListingViewController" hidesBottomBarWhenPushed="YES" id="Y6W-OH-hqX" customClass="OrderListingViewController" customModule="MultiShop_Collab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,22 +37,21 @@
                                                 <action selector="actionBack:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="AHZ-Of-z3s"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Orders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1w-Ji-VXU">
-                                            <rect key="frame" x="118.66666666666669" y="22" width="156" height="29"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Orders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1w-Ji-VXU">
+                                            <rect key="frame" x="104" y="20.666666666666671" width="185" height="29"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="156" id="6g9-W9-yOd"/>
-                                                <constraint firstAttribute="height" constant="29" id="80G-Ro-4TT"/>
+                                                <constraint firstAttribute="height" constant="29" id="796-AP-nld"/>
+                                                <constraint firstAttribute="width" constant="185" id="j0B-Nx-aZQ"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
-                                            <color key="textColor" name="AppBlack"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" name="AppYellow"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstItem="H1w-Ji-VXU" firstAttribute="top" secondItem="yxt-DD-Ex0" secondAttribute="top" constant="22" id="V0c-5S-bFa"/>
                                         <constraint firstItem="Udg-vL-Wz5" firstAttribute="top" secondItem="yxt-DD-Ex0" secondAttribute="top" constant="15" id="caG-4U-4Oi"/>
-                                        <constraint firstItem="H1w-Ji-VXU" firstAttribute="centerX" secondItem="yxt-DD-Ex0" secondAttribute="centerX" id="wW1-Da-7N7"/>
+                                        <constraint firstItem="H1w-Ji-VXU" firstAttribute="centerX" secondItem="yxt-DD-Ex0" secondAttribute="centerX" id="qxJ-bg-PIp"/>
+                                        <constraint firstItem="H1w-Ji-VXU" firstAttribute="centerY" secondItem="yxt-DD-Ex0" secondAttribute="centerY" id="wha-KQ-jiZ"/>
                                         <constraint firstItem="Udg-vL-Wz5" firstAttribute="leading" secondItem="yxt-DD-Ex0" secondAttribute="leading" constant="15" id="xcx-zu-XDU"/>
                                     </constraints>
                                 </view>
@@ -106,7 +105,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDI-Lg-3S5" userLabel="DetailsView">
                                                             <rect key="frame" x="114" y="0.0" width="269" height="159"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuF-l1-eIi">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuF-l1-eIi">
                                                                     <rect key="frame" x="0.0" y="0.0" width="269" height="41"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="41" id="R90-Nt-Eyd"/>
@@ -227,6 +226,7 @@
                     <connections>
                         <outlet property="OrdersTableView" destination="HJo-sk-fo6" id="N9m-GZ-wg4"/>
                         <outlet property="btnBack" destination="Udg-vL-Wz5" id="Xa2-CF-eUN"/>
+                        <outlet property="ordersHeaderView" destination="yxt-DD-Ex0" id="5Es-eu-y6f"/>
                         <outlet property="viewNoDataFound" destination="Ul3-Qe-XN6" id="NXI-CW-nfZ"/>
                     </connections>
                 </viewController>
@@ -240,9 +240,6 @@
         <image name="folder" width="64" height="64"/>
         <namedColor name="AppBlack">
             <color red="0.20499999821186066" green="0.22800000011920929" blue="0.25200000405311584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="AppYellow">
-            <color red="1" green="0.82800000905990601" blue="0.19699999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

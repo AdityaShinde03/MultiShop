@@ -96,8 +96,24 @@ extension SignInViewController {
         if tfEmail.text == "" || tfPassword.text == "" {
             alertUser(message: "Every Fields are required")
             return false
+        }else if (tfEmail.text?.lengthExcludingWhiteSpaces())! <= 0 || (tfPassword.text?.lengthExcludingWhiteSpaces())! <= 0 {
+            alertUser(message: "Please enter valid entries")
+            return false
         }else{
-            return true
+            if tfEmail.text == Auth.getUserDetails().Email! {
+
+                if tfPassword.text == Auth.getUserDetails().Password! {
+                    return true
+                }
+                
+                alertUser(message: "Please enter correct password!!!")
+                return false
+                
+            }else{
+                alertUser(message: "Please Register yourself!!!")
+                return false
+            }
+            
         }
     }
     
@@ -126,7 +142,7 @@ extension SignInViewController {
     @objc func keyboardWillHide(notification: NSNotification) {
         UIView.animate(withDuration: 0.2, animations: { self.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) })
     }
-    
+
     @objc func endEditing(){
         view.endEditing(true)
     }

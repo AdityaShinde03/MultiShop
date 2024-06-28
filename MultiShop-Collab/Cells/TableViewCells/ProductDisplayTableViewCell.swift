@@ -46,22 +46,17 @@ class ProductDisplayTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // MARK: -  All objc methods
+    
     @objc func automaticScrollImage() {
         
         if currentPage < totalCount * 1000 {
                   let index = IndexPath.init(item: currentPage, section: 0)
                   self.productDisplayCollectionViewCell.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
-            print(currentPage)
+//            print(currentPage)
             pageControl.currentPage = currentPage % totalCount
                   currentPage += 1
              }
-//        else {
-//                  currentPage = 0
-//                  let index = IndexPath.init(item: currentPage, section: 0)
-//                  self.productDisplayCollectionViewCell.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
-//                   pageControl.currentPage = currentPage
-//                   currentPage = 1
-//               }
         
     }
     
@@ -75,7 +70,7 @@ class ProductDisplayTableViewCell: UITableViewCell {
 
 }
 
-
+// MARK: Extensions
 extension ProductDisplayTableViewCell:UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return totalCount * 1000
@@ -102,6 +97,6 @@ extension ProductDisplayTableViewCell:UICollectionViewDataSource, UICollectionVi
         let width = scrollView.frame.width
         currentPage = Int(scrollView.contentOffset.x / width)
         
-        pageControl.currentPage = currentPage % totalCount
+        pageControl.currentPage = currentPage
     }
 }

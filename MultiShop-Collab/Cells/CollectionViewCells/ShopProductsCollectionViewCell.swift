@@ -21,5 +21,7 @@ class ShopProductsCollectionViewCell: UICollectionViewCell {
         
         productView.layer.borderColor = UIColor.lightGray.cgColor
         productView.layer.borderWidth = 1.0
+        
+        
     }
 }

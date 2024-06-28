@@ -9,23 +9,16 @@ import UIKit
 
 class ShopViewController: UIViewController  {
     
-    var productsArr  = [
-        Product(title: "Camera", image: "product-1", price: "$ 123.00"),
-        Product(title: "T-shirt", image: "product-2", price: "$ 123.00"),
-        Product(title: "Lamp", image: "product-3", price: "$ 123.00"),
-        Product(title: "Shoes", image: "product-4", price: "$ 123.00"),
-        Product(title: "Drone", image: "product-5", price: "$ 123.00"),
-        Product(title: "Watch", image: "product-6", price: "$ 123.00"),
-        Product(title: "Dress", image: "product-7", price: "$ 123.00"),
-        Product(title: "Cosmetics", image: "product-8", price: "$ 123.00"),
-        Product(title: "Chair", image: "product-9", price: "$ 123.00"),
-    ]
+    var productsArr  = OrderDataUser.Products
     
     var filteredProductsArr = [Product]()
     
+    @IBOutlet weak var shopHeaderView: UIView!
     @IBOutlet weak var shopCollectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var btnFilter: UIButton!
+    
+    // MARK: -  All View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,7 +40,11 @@ class ShopViewController: UIViewController  {
         self.navigationController?.isNavigationBarHidden = false
     }
     
+    override func viewDidLayoutSubviews() {
+        shopHeaderView.applyBottomBorder(color: UIColor(named: "AppGray")!)
+    }
     
+//  MARK: - IBActions
     @IBAction func onFilterBtnPressed(_ sender: Any) {
         print("pressed filter")
         
@@ -59,8 +56,8 @@ class ShopViewController: UIViewController  {
     
 }
 
-
-extension ShopViewController: UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate{
+// MARK: Extensions
+extension ShopViewController: UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return filteredProductsArr.count
     }
@@ -75,13 +72,17 @@ extension ShopViewController: UISearchBarDelegate, UICollectionViewDataSource, U
         return productsCell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        moveToProductsDetailsScreen(of: productsArr[indexPath.item].id)
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: shopCollectionView.frame.width/3 - 6, height: 100 - 6)
+        return CGSize(width: shopCollectionView.frame.width/3 - 6, height: 180 - 6)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-         return 16
+         return 6
         
     }
     

@@ -74,6 +74,13 @@
 		C3AE79A32C2C001B00178014 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AE79A02C2C001B00178014 /* OrderModel.swift */; };
 		C3B4BFF82C2956CA00EA3F46 /* SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B4BFF72C2956CA00EA3F46 /* SliderTableViewCell.swift */; };
 		C3B4BFFA2C2957C100EA3F46 /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B4BFF92C2957C100EA3F46 /* SliderCollectionViewCell.swift */; };
+		C3E200B32C2D487E00E90F85 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E200B22C2D487E00E90F85 /* UserModel.swift */; };
+		C3E200B52C2D489000E90F85 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E200B42C2D489000E90F85 /* UserDefaultsKeys.swift */; };
+		C3E200BA2C2D48CB00E90F85 /* GuestLoginTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E200B62C2D48CA00E90F85 /* GuestLoginTableViewCell.swift */; };
+		C3E200BB2C2D48CB00E90F85 /* ContactDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E200B72C2D48CA00E90F85 /* ContactDetailsTableViewCell.swift */; };
+		C3E200BC2C2D48CB00E90F85 /* LogoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E200B82C2D48CA00E90F85 /* LogoutTableViewCell.swift */; };
+		C3E200BD2C2D48CB00E90F85 /* YourOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E200B92C2D48CB00E90F85 /* YourOrderTableViewCell.swift */; };
+		C3E200BF2C2D48EF00E90F85 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E200BE2C2D48EF00E90F85 /* NewProfileViewController.swift */; };
 		FBA1ED3D4CFDF51A394789B3 /* Pods_MultiShop_Collab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D6FD7878828BF96A7D0177 /* Pods_MultiShop_Collab.framework */; };
 /* End PBXBuildFile section */
 
@@ -171,6 +178,13 @@
 		C3AE79A02C2C001B00178014 /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		C3B4BFF72C2956CA00EA3F46 /* SliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
 		C3B4BFF92C2957C100EA3F46 /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3E200B22C2D487E00E90F85 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		C3E200B42C2D489000E90F85 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		C3E200B62C2D48CA00E90F85 /* GuestLoginTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestLoginTableViewCell.swift; sourceTree = "<group>"; };
+		C3E200B72C2D48CA00E90F85 /* ContactDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		C3E200B82C2D48CA00E90F85 /* LogoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutTableViewCell.swift; sourceTree = "<group>"; };
+		C3E200B92C2D48CB00E90F85 /* YourOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourOrderTableViewCell.swift; sourceTree = "<group>"; };
+		C3E200BE2C2D48EF00E90F85 /* NewProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
 		D14F2B59F59BB4AD8436F048 /* Pods-MultiShop-Collab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-Collab.debug.xcconfig"; path = "Target Support Files/Pods-MultiShop-Collab/Pods-MultiShop-Collab.debug.xcconfig"; sourceTree = "<group>"; };
 		FDE3909E738A0990D677D7AC /* Pods-MultiShop-Collab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-Collab.release.xcconfig"; path = "Target Support Files/Pods-MultiShop-Collab/Pods-MultiShop-Collab.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -299,6 +313,7 @@
 				C3AE799E2C2C001B00178014 /* CartModel.swift */,
 				C3AE799F2C2C001B00178014 /* CheckoutModel.swift */,
 				C3AE79A02C2C001B00178014 /* OrderModel.swift */,
+				C3E200B22C2D487E00E90F85 /* UserModel.swift */,
 				C37ED7712C29A8D800BC2DF2 /* ProductModel.swift */,
 				C3648EBD2C2D231C00A3E0FA /* UserModel.swift */,
 			);
@@ -318,6 +333,7 @@
 				C37DC6392C29496100FAFC9E /* Constants.swift */,
 				C37DC63B2C29497C00FAFC9E /* protocols.swift */,
 				C37DC63D2C2949DE00FAFC9E /* Extentions.swift */,
+				C3E200B42C2D489000E90F85 /* UserDefaultsKeys.swift */,
 				C3AE799C2C2BFFF900178014 /* OrderDataUser.swift */,
 				C37ED76D2C29914000BC2DF2 /* DynamicHeightCollectionView.swift */,
 				C3898F7B2C2A8ED00029181E /* CheckBox.swift */,
@@ -336,6 +352,7 @@
 				C37DC6432C29508700FAFC9E /* AccountViewController.swift */,
 				C3AE79902C2BFF7000178014 /* SelectAddressViewController.swift */,
 				C3AE79982C2BFF9700178014 /* CreateAccountViewController.swift */,
+				C3E200BE2C2D48EF00E90F85 /* NewProfileViewController.swift */,
 				C37ED7732C29AFC600BC2DF2 /* ProductDetailsViewController.swift */,
 				C3AE79922C2BFF7900178014 /* TypeAddressViewController.swift */,
 				C3AE799A2C2BFF9E00178014 /* SignInViewController.swift */,
@@ -378,6 +395,10 @@
 				C37ED7612C296CF000BC2DF2 /* PoliciesTableViewCell.swift */,
 				C3AE79842C2BFEE800178014 /* OrderListingTableViewCell.swift */,
 				C3AE79822C2BFEDC00178014 /* DeliveryAddressTableViewCell.swift */,
+				C3E200B72C2D48CA00E90F85 /* ContactDetailsTableViewCell.swift */,
+				C3E200B62C2D48CA00E90F85 /* GuestLoginTableViewCell.swift */,
+				C3E200B82C2D48CA00E90F85 /* LogoutTableViewCell.swift */,
+				C3E200B92C2D48CB00E90F85 /* YourOrderTableViewCell.swift */,
 				C3AE79802C2BFED100178014 /* PlaceOrderTableViewCell.swift */,
 				C37ED7672C29780000BC2DF2 /* CategoriesTableViewCell.swift */,
 				C37ED7692C29857A00BC2DF2 /* FeaturedProductsTableViewCell.swift */,
@@ -653,11 +674,15 @@
 				C3AE798F2C2BFF6600178014 /* CheckoutViewController.swift in Sources */,
 				C37DC6012C2945CC00FAFC9E /* HomeViewController.swift in Sources */,
 				C3AE79912C2BFF7000178014 /* SelectAddressViewController.swift in Sources */,
+				C3E200B52C2D489000E90F85 /* UserDefaultsKeys.swift in Sources */,
+				C3E200BC2C2D48CB00E90F85 /* LogoutTableViewCell.swift in Sources */,
 				C37DC63C2C29497C00FAFC9E /* protocols.swift in Sources */,
 				C382D9A52C2C3EE5000AC985 /* NewProfileViewController.swift in Sources */,
 				C3AE79A22C2C001B00178014 /* CheckoutModel.swift in Sources */,
 				C3898F802C2A99760029181E /* SuggestedProductsTableViewCell.swift in Sources */,
 				C37ED7702C29A13B00BC2DF2 /* ShopProductsCollectionViewCell.swift in Sources */,
+				C3E200BD2C2D48CB00E90F85 /* YourOrderTableViewCell.swift in Sources */,
+				C3E200B32C2D487E00E90F85 /* UserModel.swift in Sources */,
 				C37ED7662C2977E900BC2DF2 /* CategoriesCollectionViewCell.swift in Sources */,
 				C37DC6402C29506000FAFC9E /* ShopViewController.swift in Sources */,
 				C3AE799D2C2BFFF900178014 /* OrderDataUser.swift in Sources */,
@@ -665,7 +690,9 @@
 				C382D9A32C2C3A5B000AC985 /* UserDefaultsKeys.swift in Sources */,
 				C3898F782C2A81740029181E /* ProductDisplayCollectionViewCell.swift in Sources */,
 				C3B4BFFA2C2957C100EA3F46 /* SliderCollectionViewCell.swift in Sources */,
+
 				C382D9A72C2C3F4E000AC985 /* GuestLoginTableViewCell.swift in Sources */,
+
 				C3AE79852C2BFEE800178014 /* OrderListingTableViewCell.swift in Sources */,
 				C37ED7722C29A8D800BC2DF2 /* ProductModel.swift in Sources */,
 				C37ED7622C296CF000BC2DF2 /* PoliciesTableViewCell.swift in Sources */,
@@ -674,6 +701,7 @@
 				C3898F7C2C2A8ED00029181E /* CheckBox.swift in Sources */,
 				C3898F882C2AD3A90029181E /* FiltersViewController.swift in Sources */,
 				C37ED76E2C29914000BC2DF2 /* DynamicHeightCollectionView.swift in Sources */,
+				C3E200BF2C2D48EF00E90F85 /* NewProfileViewController.swift in Sources */,
 				C37ED7682C29780000BC2DF2 /* CategoriesTableViewCell.swift in Sources */,
 				C3AE797F2C2BFEA900178014 /* AddressTableViewCell.swift in Sources */,
 				C37DC5FD2C2945CC00FAFC9E /* AppDelegate.swift in Sources */,
@@ -698,8 +726,11 @@
 				C382D9AD2C2C6055000AC985 /* LogoutTableViewCell.swift in Sources */,
 				C37DC63A2C29496100FAFC9E /* Constants.swift in Sources */,
 				C3AE79A12C2C001B00178014 /* CartModel.swift in Sources */,
+
+
 				C382D9A92C2C6007000AC985 /* ContactDetailsTableViewCell.swift in Sources */,
 				C3648EBE2C2D231C00A3E0FA /* UserModel.swift in Sources */,
+
 				C3AE79812C2BFED100178014 /* PlaceOrderTableViewCell.swift in Sources */,
 				C3B4BFF82C2956CA00EA3F46 /* SliderTableViewCell.swift in Sources */,
 				C3AE79972C2BFF8C00178014 /* ProfileViewController.swift in Sources */,

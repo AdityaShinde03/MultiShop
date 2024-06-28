@@ -41,23 +41,16 @@ class SliderTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+    // MARK: -  All objc methods
     @objc func automaticScrollImage() {
         
         if currentPage < carouselImages.count * 3000 {
                   let index = IndexPath.init(item: currentPage, section: 0)
                   self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
-            print(currentPage)
+//            print(currentPage)
             pageControl.currentPage = currentPage % carouselImages.count
                   currentPage += 1
              }
-//        else {
-//                  currentPage = 0
-//                  let index = IndexPath.init(item: currentPage, section: 0)
-//                  self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
-//                   pageControl.currentPage = currentPage
-//                   currentPage = 1
-//               }
         
     }
     
@@ -71,6 +64,7 @@ class SliderTableViewCell: UITableViewCell {
 
 }
 
+// MARK: Extensions
 extension SliderTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return carouselImages.count * 3000

@@ -41,7 +41,9 @@ class CartTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        NotificationCenter.default.addObserver(self, selector: #selector(enableMinusBtn), name: NSNotification.Name("enableMinusBtn"), object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(disableMinusBtn), name: NSNotification.Name("disableMinusBtn"), object: nil)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -70,6 +72,15 @@ class CartTableViewCell: UITableViewCell {
     @IBAction func actionMinus(_ sender: UIButton) {
         delegate.substractQuantity(index: sender.tag - 1)
         
+    }
+    
+    @objc func disableMinusBtn(){
+        lbQty.text = "1"
+        btnMinus.isEnabled = false
+    }
+    
+    @objc func enableMinusBtn(){
+        btnMinus.isEnabled = true
     }
     
     
