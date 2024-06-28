@@ -130,7 +130,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.viewQuantity.applyCornerRadius(radius: 5)
         cell.viewQuantity.layer.borderWidth = 1
-        cell.viewQuantity.layer.borderColor = UIColor(resource: .appGray).cgColor
+        cell.viewQuantity.layer.borderColor = UIColor(named: "AppGray")?.cgColor
         
         
         return cell
