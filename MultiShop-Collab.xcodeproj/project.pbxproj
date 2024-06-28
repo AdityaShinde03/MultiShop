@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5AE301898110638C382F35DF /* Pods_MultiShop_CollabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E7451B77EADE66A8AF869A /* Pods_MultiShop_CollabTests.framework */; };
 		965E379830C6AF138B967B07 /* Pods_MultiShop_Collab_MultiShop_CollabUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B588D20A9E7FF544C426160 /* Pods_MultiShop_Collab_MultiShop_CollabUITests.framework */; };
+		C340179B2C2EDC530026B5FC /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C340179A2C2EDC530026B5FC /* ProductViewModel.swift */; };
 		C3648EBE2C2D231C00A3E0FA /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3648EBD2C2D231C00A3E0FA /* UserModel.swift */; };
 		C37DC5FD2C2945CC00FAFC9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC5FC2C2945CC00FAFC9E /* AppDelegate.swift */; };
 		C37DC5FF2C2945CC00FAFC9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37DC5FE2C2945CC00FAFC9E /* SceneDelegate.swift */; };
@@ -109,6 +110,7 @@
 		8BD48927881D50E849EC9871 /* Pods-MultiShop-CollabTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-CollabTests.release.xcconfig"; path = "Target Support Files/Pods-MultiShop-CollabTests/Pods-MultiShop-CollabTests.release.xcconfig"; sourceTree = "<group>"; };
 		94F76E3EBEFC2EA45D72BDF8 /* Pods-MultiShop-Collab-MultiShop-CollabUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-Collab-MultiShop-CollabUITests.debug.xcconfig"; path = "Target Support Files/Pods-MultiShop-Collab-MultiShop-CollabUITests/Pods-MultiShop-Collab-MultiShop-CollabUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A19A3A60BC50C92E5D73A3EC /* Pods-MultiShop-Collab-MultiShop-CollabUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiShop-Collab-MultiShop-CollabUITests.release.xcconfig"; path = "Target Support Files/Pods-MultiShop-Collab-MultiShop-CollabUITests/Pods-MultiShop-Collab-MultiShop-CollabUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C340179A2C2EDC530026B5FC /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		C3648EBD2C2D231C00A3E0FA /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		C37DC5F92C2945CC00FAFC9E /* MultiShop-Collab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MultiShop-Collab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37DC5FC2C2945CC00FAFC9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -241,6 +243,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C34017992C2EDC2F0026B5FC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C340179A2C2EDC530026B5FC /* ProductViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		C37DC5F02C2945CC00FAFC9E = {
 			isa = PBXGroup;
 			children = (
@@ -266,11 +276,11 @@
 		C37DC5FB2C2945CC00FAFC9E /* MultiShop-Collab */ = {
 			isa = PBXGroup;
 			children = (
+				C34017992C2EDC2F0026B5FC /* ViewModels */,
 				C3B4BFF42C2955D400EA3F46 /* Cells */,
 				C37DC6362C29486400FAFC9E /* UI */,
 				C37DC6352C29485400FAFC9E /* ViewControllers */,
 				C37DC6322C29481D00FAFC9E /* Common */,
-				C37DC6312C29480700FAFC9E /* ViewModels */,
 				C37DC6302C2947F900FAFC9E /* Models */,
 				C37DC62F2C2947E700FAFC9E /* NetworkManager */,
 				C37DC5FC2C2945CC00FAFC9E /* AppDelegate.swift */,
@@ -319,13 +329,6 @@
 				C3648EBD2C2D231C00A3E0FA /* UserModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		C37DC6312C29480700FAFC9E /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		C37DC6322C29481D00FAFC9E /* Common */ = {
@@ -397,7 +400,6 @@
 				C37ED7612C296CF000BC2DF2 /* PoliciesTableViewCell.swift */,
 				C3AE79842C2BFEE800178014 /* OrderListingTableViewCell.swift */,
 				C3AE79822C2BFEDC00178014 /* DeliveryAddressTableViewCell.swift */,
-				C382D9A62C2C3F4E000AC985 /* GuestLoginTableViewCell.swift */,
 				C3E200B72C2D48CA00E90F85 /* ContactDetailsTableViewCell.swift */,
 				C3E200B82C2D48CA00E90F85 /* LogoutTableViewCell.swift */,
 				C3E200B92C2D48CB00E90F85 /* YourOrderTableViewCell.swift */,
@@ -703,6 +705,7 @@
 				C3898F7C2C2A8ED00029181E /* CheckBox.swift in Sources */,
 				C3898F882C2AD3A90029181E /* FiltersViewController.swift in Sources */,
 				C37ED76E2C29914000BC2DF2 /* DynamicHeightCollectionView.swift in Sources */,
+				C340179B2C2EDC530026B5FC /* ProductViewModel.swift in Sources */,
 				C3E200BF2C2D48EF00E90F85 /* NewProfileViewController.swift in Sources */,
 				C37ED7682C29780000BC2DF2 /* CategoriesTableViewCell.swift in Sources */,
 				C3AE797F2C2BFEA900178014 /* AddressTableViewCell.swift in Sources */,
