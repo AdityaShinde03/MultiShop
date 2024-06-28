@@ -61,6 +61,7 @@ class ProductChoicesTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        print("Product from singleton",OrderDataUser.Products[pId])
         if OrderDataUser.Products[pId].isAddedToCart == true {
             btnAddToCart.isEnabled = false
             btnAddToCart.setTitle("Added to Cart", for: .disabled)
@@ -80,8 +81,9 @@ class ProductChoicesTableViewCell: UITableViewCell {
     @objc func onColorBtnPressed(_ sender:UIButton){
         for colorBtn in btnColors {
             if sender.tag == colorBtn.tag{
-                colorBtn.layer.borderColor = UIColor.systemYellow.cgColor
-                colorBtn.backgroundColor = .systemYellow
+                colorBtn.layer.borderColor = UIColor(named: "systemGray5")?.cgColor
+                colorBtn.backgroundColor = .systemGray5
+                colorBtn.layer.borderColor = .none
             }else{
                 colorBtn.layer.borderColor = UIColor.systemGray.cgColor
                 colorBtn.backgroundColor = .systemBackground
@@ -92,8 +94,9 @@ class ProductChoicesTableViewCell: UITableViewCell {
     @objc func onSizeBtnPressed(_ sender: UIButton){
         for sizeBtn in btnSizes {
             if sender.tag == sizeBtn.tag{
-                sizeBtn.layer.borderColor = UIColor.systemYellow.cgColor
-                sizeBtn.backgroundColor = .systemYellow
+                sizeBtn.layer.borderColor = UIColor(named: "systemGray5")?.cgColor
+                sizeBtn.backgroundColor = .systemGray5
+                sizeBtn.layer.borderColor = .none
             }else{
                 sizeBtn.layer.borderColor = UIColor.systemGray.cgColor
                 sizeBtn.backgroundColor = .systemBackground

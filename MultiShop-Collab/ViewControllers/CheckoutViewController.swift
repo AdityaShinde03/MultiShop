@@ -58,7 +58,8 @@ class CheckoutViewController: UIViewController {
             
             
             
-            OrderDataUser.checkoutData.append(checkoutObj) 
+            OrderDataUser.checkoutData.append(checkoutObj)
+            removeProductsFromCart()
             
             OrderDataUser.userCartArr = []
             
@@ -89,6 +90,12 @@ extension CheckoutViewController {
         let selectAddress = self.storyboard?.instantiateViewController(withIdentifier: "SelectAddressViewController") as! SelectAddressViewController
         selectAddress.addressDelegate = self
         self.navigationController?.pushViewController(selectAddress, animated: true)
+    }
+    
+    func removeProductsFromCart(){
+        for item in OrderDataUser.userCartArr{
+            OrderDataUser.Products[item.productId!].isAddedToCart = false
+        }
     }
 }
 
