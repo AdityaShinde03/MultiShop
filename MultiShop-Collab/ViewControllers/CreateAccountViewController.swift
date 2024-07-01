@@ -44,13 +44,48 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func actionCreateAccount(_ sender: Any) {
         if validateEntries(){
-            Auth.register(name: tfName.text!, phone: tfPhoneNumber.text!, address: txtViewDefaultAddress.text, email: tfEmail.text!, password: tfPassword.text!)
-            moveToPreviousScreen()
+//            Auth.register(name: tfName.text!, phone: tfPhoneNumber.text!, address: txtViewDefaultAddress.text, email: tfEmail.text!, password: tfPassword.text!)
+//            moveToPreviousScreen()
+            
+            registerUser(name: tfName.text!, phone: tfPhoneNumber.text!, address: txtViewDefaultAddress.text, email: tfEmail.text!, password: tfPassword.text!)
         }
     }
     
     @IBAction func actionSignIn(_ sender: Any) {
         moveToPreviousScreen()
+    }
+}
+
+extension CreateAccountViewController {
+    func registerUser(name: String, phone: String, address: String, email: String, password: String){
+        
+        let body = [
+            "email":email,
+            "password":password,
+            "firstName":name,
+            "lastName":name,
+            "phone":phone
+        ]
+        
+        let url = Constants.register
+        
+        let request = APIRequest(isLoader: true, method: .post, path: url, headers: HeaderValue.headerWithoutAuthToken.value, body: body)
+        
+        let registerModel = RegisterViewModel()
+        
+        registerModel.callRegisterUserApi(request: request) { RegisterUserModel in
+            DispatchQueue.main.async {
+                print(RegisterUserModel)
+                if RegisterUserModel.success! {
+                    self.moveToPreviousScreen()
+                }else{
+                    self.alertUser(message: RegisterUserModel.message!)
+                }
+            }
+        } error: { error in
+            print("RegistrationL Error: ", error!)
+        }
+
     }
 }
 

@@ -16,6 +16,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tfEmail: UITextField!
     
     @IBOutlet weak var tfPassword: UITextField!
+    
+    var userProfile: UserProfile!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +32,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func actionLogin(_ sender: Any) {
-        if validateEntries() {
-            Auth.login()
-            moveToPreviousScreen()
-        }
+        login(email: tfEmail.text!, password: tfPassword.text!)
     }
     
     @IBAction func actionSignUp(_ sender: UIButton) {
@@ -67,6 +66,59 @@ extension SignInViewController {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         giveBorderToTextField(textField: textField, style: "Release")
+    }
+}
+
+extension SignInViewController {
+    func login(email: String, password: String){
+        
+        
+//        let body = [
+//            "email":"up@gmail.com",
+//            "password":"Utsavp@123"
+//        ]
+        
+        let body = [
+            "email":email,
+            "password":password
+        ]
+        
+        print("passed body: ", body)
+        
+        let url = Constants.login
+        
+        let request = APIRequest(isLoader: true, method: .post, path: url, headers: HeaderValue.headerWithoutAuthToken.value, body: body)
+        
+        let loginModel = LoginViewModel()
+        
+        loginModel.callLoginUserApi(request: request) { logModel in
+            DispatchQueue.main.async{
+                print("logModel: ", logModel)
+                
+                if logModel.success!{
+                    let token = logModel.token!
+                    print("******+++================server token: ", token)
+                    UserDefaults.standard.setValue(token, forKey: "Token")
+                    UserDefaults.standard.synchronize()
+                    print("******+++================local Token: ", UserDefaults.standard.string(forKey: "Token")!)
+                    bearerToken = "Bearer " + UserDefaults.standard.string(forKey: "Token")!
+                    Auth.isUserLoggedIn = true
+                    Auth.token = UserDefaults.standard.string(forKey: "Token")!
+                    print("user ID: ",logModel.data?.userId as Any)
+                    Auth.userId = (logModel.data?.userId)!
+                    UserDefaults.standard.setValue(logModel.data?.userId, forKey: "UserId")
+                    UserDefaults.standard.setValue(Auth.isUserLoggedIn, forKey: "hasUserLoggedIn")
+                    
+                    
+                    
+                    self.moveToPreviousScreen()
+                }else{
+                    self.alertUser(message: logModel.message!)
+                }
+            }
+        } error: { error in
+            print("error: ", error as Any)
+        }
     }
 }
 

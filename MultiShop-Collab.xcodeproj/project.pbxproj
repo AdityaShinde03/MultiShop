@@ -53,6 +53,12 @@
 		C3898F842C2AA41C0029181E /* DisplayImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3898F832C2AA41C0029181E /* DisplayImageViewController.swift */; };
 		C3898F882C2AD3A90029181E /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3898F872C2AD3A90029181E /* FiltersViewController.swift */; };
 		C3898F8A2C2AD9740029181E /* FiltersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3898F892C2AD9740029181E /* FiltersTableViewCell.swift */; };
+		C3AD256E2C326878004812E3 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD256D2C326878004812E3 /* UserViewModel.swift */; };
+		C3AD25702C3275E6004812E3 /* RegisterUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD256F2C3275E6004812E3 /* RegisterUserModel.swift */; };
+		C3AD25722C327D6F004812E3 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD25712C327D6F004812E3 /* RegisterViewModel.swift */; };
+		C3AD25742C327EF8004812E3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD25732C327EF8004812E3 /* LoginViewModel.swift */; };
+		C3AD25762C327FB0004812E3 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD25752C327FB0004812E3 /* LoginModel.swift */; };
+		C3AD25782C32D975004812E3 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD25772C32D975004812E3 /* EditViewController.swift */; };
 		C3AE797D2C2BFE8F00178014 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AE797C2C2BFE8F00178014 /* CartTableViewCell.swift */; };
 		C3AE797F2C2BFEA900178014 /* AddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AE797E2C2BFEA900178014 /* AddressTableViewCell.swift */; };
 		C3AE79812C2BFED100178014 /* PlaceOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AE79802C2BFED100178014 /* PlaceOrderTableViewCell.swift */; };
@@ -158,6 +164,12 @@
 		C3898F832C2AA41C0029181E /* DisplayImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayImageViewController.swift; sourceTree = "<group>"; };
 		C3898F872C2AD3A90029181E /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		C3898F892C2AD9740029181E /* FiltersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersTableViewCell.swift; sourceTree = "<group>"; };
+		C3AD256D2C326878004812E3 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		C3AD256F2C3275E6004812E3 /* RegisterUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserModel.swift; sourceTree = "<group>"; };
+		C3AD25712C327D6F004812E3 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		C3AD25732C327EF8004812E3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C3AD25752C327FB0004812E3 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		C3AD25772C32D975004812E3 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		C3AE797C2C2BFE8F00178014 /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		C3AE797E2C2BFEA900178014 /* AddressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTableViewCell.swift; sourceTree = "<group>"; };
 		C3AE79802C2BFED100178014 /* PlaceOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceOrderTableViewCell.swift; sourceTree = "<group>"; };
@@ -247,6 +259,9 @@
 			isa = PBXGroup;
 			children = (
 				C340179A2C2EDC530026B5FC /* ProductViewModel.swift */,
+				C3AD256D2C326878004812E3 /* UserViewModel.swift */,
+				C3AD25712C327D6F004812E3 /* RegisterViewModel.swift */,
+				C3AD25732C327EF8004812E3 /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -327,6 +342,8 @@
 				C3E200B22C2D487E00E90F85 /* UserModel.swift */,
 				C37ED7712C29A8D800BC2DF2 /* ProductModel.swift */,
 				C3648EBD2C2D231C00A3E0FA /* UserModel.swift */,
+				C3AD256F2C3275E6004812E3 /* RegisterUserModel.swift */,
+				C3AD25752C327FB0004812E3 /* LoginModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -367,6 +384,7 @@
 				C3898F872C2AD3A90029181E /* FiltersViewController.swift */,
 				C382D9A42C2C3EE5000AC985 /* NewProfileViewController.swift */,
 				C3CA39A42C2EB7AE0020F5D5 /* NewCartViewController.swift */,
+				C3AD25772C32D975004812E3 /* EditViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -395,13 +413,13 @@
 			isa = PBXGroup;
 			children = (
 				C3AE797C2C2BFE8F00178014 /* CartTableViewCell.swift */,
+				C3E200B82C2D48CA00E90F85 /* LogoutTableViewCell.swift */,
 				C3B4BFF72C2956CA00EA3F46 /* SliderTableViewCell.swift */,
 				C3AE797E2C2BFEA900178014 /* AddressTableViewCell.swift */,
 				C37ED7612C296CF000BC2DF2 /* PoliciesTableViewCell.swift */,
 				C3AE79842C2BFEE800178014 /* OrderListingTableViewCell.swift */,
 				C3AE79822C2BFEDC00178014 /* DeliveryAddressTableViewCell.swift */,
 				C3E200B72C2D48CA00E90F85 /* ContactDetailsTableViewCell.swift */,
-				C3E200B82C2D48CA00E90F85 /* LogoutTableViewCell.swift */,
 				C3E200B92C2D48CB00E90F85 /* YourOrderTableViewCell.swift */,
 				C3AE79802C2BFED100178014 /* PlaceOrderTableViewCell.swift */,
 				C3CA39A02C2E80B20020F5D5 /* GuestLoginTableViewCell.swift */,
@@ -688,12 +706,14 @@
 				C37ED7702C29A13B00BC2DF2 /* ShopProductsCollectionViewCell.swift in Sources */,
 				C3E200BD2C2D48CB00E90F85 /* YourOrderTableViewCell.swift in Sources */,
 				C3E200B32C2D487E00E90F85 /* UserModel.swift in Sources */,
+				C3AD25762C327FB0004812E3 /* LoginModel.swift in Sources */,
 				C37ED7662C2977E900BC2DF2 /* CategoriesCollectionViewCell.swift in Sources */,
 				C3CA39A12C2E80B20020F5D5 /* GuestLoginTableViewCell.swift in Sources */,
 				C37DC6402C29506000FAFC9E /* ShopViewController.swift in Sources */,
 				C3AE799D2C2BFFF900178014 /* OrderDataUser.swift in Sources */,
 				C3898F822C2A9C100029181E /* SuggestedProductsCollectionViewCell.swift in Sources */,
 				C382D9A32C2C3A5B000AC985 /* UserDefaultsKeys.swift in Sources */,
+				C3AD25782C32D975004812E3 /* EditViewController.swift in Sources */,
 				C3898F782C2A81740029181E /* ProductDisplayCollectionViewCell.swift in Sources */,
 				C3B4BFFA2C2957C100EA3F46 /* SliderCollectionViewCell.swift in Sources */,
 				C382D9A72C2C3F4E000AC985 /* GuestLoginTableViewCell.swift in Sources */,
@@ -704,9 +724,11 @@
 				C3AE79932C2BFF7900178014 /* TypeAddressViewController.swift in Sources */,
 				C3898F7C2C2A8ED00029181E /* CheckBox.swift in Sources */,
 				C3898F882C2AD3A90029181E /* FiltersViewController.swift in Sources */,
+				C3AD25742C327EF8004812E3 /* LoginViewModel.swift in Sources */,
 				C37ED76E2C29914000BC2DF2 /* DynamicHeightCollectionView.swift in Sources */,
 				C340179B2C2EDC530026B5FC /* ProductViewModel.swift in Sources */,
 				C3E200BF2C2D48EF00E90F85 /* NewProfileViewController.swift in Sources */,
+				C3AD25722C327D6F004812E3 /* RegisterViewModel.swift in Sources */,
 				C37ED7682C29780000BC2DF2 /* CategoriesTableViewCell.swift in Sources */,
 				C3AE797F2C2BFEA900178014 /* AddressTableViewCell.swift in Sources */,
 				C37DC5FD2C2945CC00FAFC9E /* AppDelegate.swift in Sources */,
@@ -723,6 +745,8 @@
 				C3AE798D2C2BFF5800178014 /* CartViewController.swift in Sources */,
 				C3AE79952C2BFF8200178014 /* OrderListingViewController.swift in Sources */,
 				C37ED76C2C29866B00BC2DF2 /* FeaturedProductsCollectionViewCell.swift in Sources */,
+				C3AD256E2C326878004812E3 /* UserViewModel.swift in Sources */,
+				C3AD25702C3275E6004812E3 /* RegisterUserModel.swift in Sources */,
 				C3898F842C2AA41C0029181E /* DisplayImageViewController.swift in Sources */,
 				C3898F762C2A801A0029181E /* ProductDisplayTableViewCell.swift in Sources */,
 				C382D9AB2C2C602F000AC985 /* YourOrderTableViewCell.swift in Sources */,

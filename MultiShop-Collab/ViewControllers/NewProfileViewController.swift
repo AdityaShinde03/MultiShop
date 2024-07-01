@@ -16,9 +16,10 @@ class NewProfileViewController: UIViewController {
   
     @IBOutlet weak var lblUserName: UILabel!
     
-
-    var ProfileData : User!
-    var totalTableRow : Int!
+    //var UserDataArr: UserData!
+    var ProfileData : UserData?
+    var totalTableRow : Int! = 1
+    var userProfile: UserProfile!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,30 +29,38 @@ class NewProfileViewController: UIViewController {
         
         ProfileTableView.separatorStyle = .none
 
+        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-        if Auth.isUserLoggedIn {
-            print("get Usrr Dewtails: ", Auth.getUserDetails())
-            
-            ProfileData = Auth.getUserDetails()
-            lblUserName.text = ProfileData.Name
-        }
-        
+        print("===========================================================================================================")
+        print("Token on View Will Appear", UserDefaults.standard.string(forKey: "Token") as Any)
+        print("===========================================================================================================")
         setupUI()
+        
     }
     
     
     @IBAction func actionLogin(_ sender: Any) {
         moveToLoginPage()
+       
     }
+    
+    @IBAction func actionEditProfile(_ sender: Any) {
+        let edit = self.storyboard?.instantiateViewController(withIdentifier: "EditViewController") as! EditViewController
+        
+        navigationController?.pushViewController(edit, animated: true)
+    }
+    
 }
 
 extension NewProfileViewController:  UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if Auth.isUserLoggedIn {
+            
             totalTableRow = 3
         }else{
             totalTableRow = 1
@@ -74,12 +83,13 @@ extension NewProfileViewController:  UITableViewDelegate, UITableViewDataSource 
                 let cell = ProfileTableView.dequeueReusableCell(withIdentifier: "ContactDetailsTableViewCell", for: indexPath) as! ContactDetailsTableViewCell
                 
                 cell.selectionStyle = .none
-
-                cell.lbUserName.text = ProfileData.Name
-                cell.lbUserEmail.text = ProfileData.Email
-                cell.lbPhoneNumber.text = ProfileData.Phone
-                cell.lbAddress.text = ProfileData.Address
+                
+                cell.lbUserName.text = ProfileData?.firstName
+                cell.lbUserEmail.text = ProfileData?.email
+                cell.lbPhoneNumber.text = "\(ProfileData?.phone ?? 9999999999)"
+                cell.lbAddress.text = "empty Address"
                 return cell
+                
             }else if index == 1 {
                 let cell = ProfileTableView.dequeueReusableCell(withIdentifier: "YourOrderTableViewCell", for: indexPath) as! YourOrderTableViewCell         
                 cell.selectionStyle = .none
@@ -91,6 +101,9 @@ extension NewProfileViewController:  UITableViewDelegate, UITableViewDataSource 
                 cell.delegateToLogout = self
                 return cell
             }
+//            
+//            let cell = UITableViewCell()
+//            return cell
         }
     }
     
@@ -118,22 +131,57 @@ extension NewProfileViewController : ProfileViewDelegate {
     
     func logout() {
         Auth.logout()
+        UserDefaults.standard.removeObject(forKey: "Token")
+        UserDefaults.standard.removeObject(forKey: "UserId")
         ProfileTableView.reloadData()
     }
 }
 
 extension NewProfileViewController {
+    
+    
+    
     func setupUI(){
         if Auth.isUserLoggedIn {
+            print("user has logged In")
             totalTableRow = 3
-            ProfileData = Auth.getUserDetails()
+            //ProfileData = Auth.getUserDetails()
+            fetchUserData()
             
         }else{
             totalTableRow = 1
         }
         
-        Headerview.isHidden = false
-        ProfileTableView.tableHeaderView?.frame.size = CGSize(width: ProfileTableView.frame.width, height: 219.0)
-        ProfileTableView.reloadData()
+
+    }
+}
+
+
+extension NewProfileViewController {
+    func fetchUserData() {
+        let url = Constants.getUserDetails
+        print("url: ", url)
+        
+        let request = APIRequest(isLoader: true, method: .get, path: url, headers: HeaderValue.headerWithToken.value, body: nil)
+        
+        let userModel = UserViewModel()
+        print("Header: ", HeaderValue.headerWithToken.value)
+        userModel.callUserDataApi(request: request) { [self] userModelData in
+            
+            DispatchQueue.main.async { [self] in
+                ProfileData = userModelData.data
+                print("====================================>>>>>>>>>>>>>>>Print profiledata: ", ProfileData)
+                Headerview.isHidden = false
+                ProfileTableView.tableHeaderView?.frame.size = CGSize(width: ProfileTableView.frame.width, height: 219.0)
+                //ProfileTableView.reloadData()
+                ProfileTableView.reloadData()
+                
+                
+            }
+        
+        } error: { error in
+            print("error at UserProfile")
+        }
+ 
     }
 }
